@@ -1,0 +1,40 @@
+
+.introducao {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 100% da altura da viewport */
+  overflow: hidden; /* Garante que o vídeo não ultrapasse os limites da seção */
+}
+
+.introducao::after {
+  content: ""; /* Necessário para gerar o elemento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, transparent 50%);
+  /* Inicia escuro no topo e gradualmente se torna transparente em direção ao fundo */
+}
+
+.video-background-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Garante que o vídeo não ultrapasse os limites do wrapper */
+}
+
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que o vídeo cubra toda a área sem distorção */
+  transform: translate(-50%, -50%); /* Centraliza o vídeo */
+}
+
+
+

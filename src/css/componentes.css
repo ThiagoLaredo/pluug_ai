@@ -1,0 +1,96 @@
+.btn {
+  display: inline-flex; /* Altera de flex para inline-flex */
+  align-items: center; /* Centraliza verticalmente o conteúdo do link */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo dentro do botão */
+  font: 600 1rem/1.6 'Raleway', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: var(--primary);
+  text-decoration: none;
+  padding: 10px 20px; /* Define um padding horizontal e vertical */
+  border-radius: 50px; /* Bordas arredondadas */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves ao interagir */
+  position: relative; /* Posição relativa para pseudo-elementos ou outros ajustes */
+  text-align: center;
+}
+
+.btn-voltar, .btn-quero {
+  background-color: var(--textwhite); 
+  color: var(--primary);
+  width: fit-content;
+  cursor: pointer;
+}
+
+.btn-voltar:hover {
+  transform: scale(1.05); /* Efeito de aumento no tamanho */
+}
+
+.btn-vazado {
+  display: inline-flex; /* Usar flexbox para alinhar itens dentro do link */
+  align-items: center; /* Centraliza verticalmente o conteúdo do link */
+  font: 600 0.8rem/1 'Raleway', sans-serif;
+  letter-spacing: 0.1em;
+  color: var(--textwhite);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 0px;
+  transition: background-color 0.3s;
+  position: relative; /* Necessário para posicionar o pseudo-elemento */
+}
+
+.btn-vazado::after {
+  content: ''; 
+  margin-left: 10px; 
+  border: solid transparent;
+  border-width: 5px 0 5px 10px; 
+  border-left-color: var(--primary); 
+  display: inline-block;
+  vertical-align: middle; 
+}
+
+.btn:hover {
+  background-color: var(--textwhite);
+  color: var(--primary);
+  transform: scale(1.05); 
+}
+
+.texto-destaque {
+  font: 600 2.5rem/1.2 'Raleway', sans-serif;
+  position: relative;
+  display: inline-block; /* Garante que o grifo se ajuste ao tamanho do texto */
+}
+
+.texto-destaque::before {
+  content: ''; /* Necessário para exibir o pseudo-elemento */
+  position: absolute;
+  background-color: var(--primary);
+  width: 100%; /* Largura total do elemento pai */
+  height: 0.6em; /* Altura do grifo */
+  bottom: 0; /* Posiciona o grifo na parte inferior do texto */
+  left: 0; /* Alinha o grifo à esquerda */
+  z-index: -1; /* Coloca o grifo atrás do texto */
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  color: var(--primary); 
+  font-size: 24px !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(var(--primary-rgb), 0.5) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--primary) !important; 
+}
+
+@media (max-width: 768px) {
+
+  .texto-destaque {
+    font: 600 2rem/1.2 'Raleway', sans-serif;
+  }
+
+  .texto-destaque::before {
+    height: 0.5em; /* Altura do grifo */
+  }
+}

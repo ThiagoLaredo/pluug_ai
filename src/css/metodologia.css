@@ -1,0 +1,89 @@
+.metodologia {
+  padding: 50px 20px 100px 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between; /* Alinha o conteúdo e a imagem */
+  align-items: center;
+  gap: 20px;
+}
+
+.metodologia-texto {  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  z-index: 2;
+  max-width: 50%; /* Evita que o texto fique muito largo */
+}
+
+.metodologia h2 {
+  font: 300 clamp(1.8rem, 2vw, 2.4rem) 'Raleway', sans-serif;
+  color: var(--textwhite);
+}
+
+.metodologia h2 a {
+  color: var(--textwhite);
+}
+
+.metodologia p {
+  font: 300 1rem/1.6 'Raleway', sans-serif;
+  color: var(--textwhite);
+  max-width: 44ch;
+}
+
+.metodologia img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  max-width: 600px;
+  aspect-ratio: 1171 / 535;
+  height: auto;
+  border-radius: 20px 0 0 20px;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+/* Ajustes para telas médias */
+@media (max-width: 1024px) {
+  .metodologia {
+    flex-direction: column; /* Empilha conteúdo */
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .metodologia-texto {
+    max-width: 80%;
+    align-items: center;
+  }
+
+  .metodologia img {
+    position: relative; /* Sai do absolute */
+    width: 100%; /* Ocupa toda a largura */
+    max-width: 500px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .metodologia {
+    padding: 50px 15px 0px 15px;
+  }
+
+  .metodologia-texto {
+    max-width: 100%;
+    margin-bottom: 60px; /* Aumenta o espaço abaixo do texto */
+  }
+
+  .metodologia img {
+    width: 100%;
+    max-width: none;
+    border-radius: 10px;
+    margin-top: 40px; /* Adiciona espaço entre o texto e a imagem */
+  }
+}
+
