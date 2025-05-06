@@ -1,7 +1,6 @@
 import "../../css/global.css";
 import "../../css/header.css";
 import "../../css/introducao.css";
-import "../../css/solucoes-intro.css";
 import "../../css/footer.css";
 import "../../css/menu-mobile.css";
 import "../../css/submenu.css";
@@ -19,9 +18,6 @@ import HeaderScroll from '../modules/header-scroll.js';
 import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
 import EbookPopup from "../modules/ebookPopup.js";
-import { updateBackgrounds } from "../modules/updateBackgrounds.js";
-import EbookForm from "../modules/ebookForm.js";
-import renderizarSubmenu from '../modules/cases/renderizarSubmenu.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -54,18 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     new EbookPopup();
     new EbookForm();
 
-
-    // Performance imagens Background
-    updateBackgrounds();
-    window.addEventListener("resize", updateBackgrounds);
-
     // Formulário
     new FormHandler();
 
     // JSON dos cases
     const submenuCasesEl = document.querySelector('.submenu-cases');
-
-    if (submenuCasesEl) {
-        renderizarSubmenu('.submenu-cases', '../cases.json');
-    }     
+   
 });

@@ -36,7 +36,7 @@
 
   .js [data-menu="button"] {
     display: flex;
-    background-color: var(--primary); 
+    background-color: var(--secondary); 
     border: none;
     padding: 0.6rem; 
     border-radius: 50%; 
@@ -110,7 +110,7 @@
     text-align: center;
     z-index: 3;
     height: 100vh;
-    background-color: var(--bg-cinza);
+    background-color: var(--primary);
   }
 
   .js [data-menu="list"].active, .js [data-menu="list"].submenu.active {
@@ -119,12 +119,13 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: var(--bg);
+    background-color: var(--primary);
   }
 
   .js [data-menu="list"] a, .js [data-menu="list"] span, .js [data-menu="list"] .submenu a {
     font-size: 20px;
     line-height: 1;
+    color: var(--textwhite);
   }
 
   .js [data-menu="list"] li {
@@ -141,7 +142,7 @@
 
   [data-menu="contato-mobile"].active  {
     position: fixed;
-    font: 500 1rem 'Raleway', sans-serif;
+    font: 500 1rem 'Inter', sans-serif;
     color: var(--textwhite);
     display: block;
     bottom: 0;
