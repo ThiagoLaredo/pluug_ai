@@ -67,7 +67,7 @@
 
 /* Estilo do texto (inicialmente invisível) */
 .button-text {
-    font: 500 1rem/1 'Raleway', sans-serif;
+    font: 500 1rem/1 'Inter', sans-serif;
     opacity: 0;
     font-size: 16px;
     transition: opacity 0.2s ease;

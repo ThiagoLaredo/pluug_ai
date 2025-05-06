@@ -12,7 +12,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #212121;
 }
 
 button {
@@ -21,36 +20,11 @@ button {
 
 body {
   overflow-x: hidden;
-}
-
-.swiper-button-prev, .swiper-button-next {
-  outline: none;
+  font-family: 'Inter', sans-serif;
 }
 
 .swiper-slide {
   user-select: none;
-}
-
-
-.container-background-svg {
-  position: relative;
-  background-image: linear-gradient(to top, var(--bg-escuro) 20%, transparent 20%);
-  z-index: 1;
-  overflow: hidden;
-
-}
-
-.svg-canal-container {
-  position: absolute;
-  bottom: -6px;
-  z-index: -2;
-  width: 100%;
-}
-
-.svg-ponto-vista-container  {
-  position: absolute;
-  bottom: -30%;
-  left: -6%;
 }
 
 * {
@@ -61,7 +35,7 @@ body {
   max-width: 1200px; /* Largura máxima do container */
   margin: 0 auto;
   width: 100%; /* Faz o container ocupar toda a largura disponível */
-  padding: 0 20px; /* Espaço interno do container */
+  padding: 0 20px;
   box-sizing: border-box; /* Inclui padding na largura total */
 }
 

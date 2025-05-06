@@ -1,37 +1,42 @@
 import "../../css/global.css";
 import "../../css/header.css";
 import "../../css/introducao.css";
-import "../../css/solucoes-home.css";
-import "../../css/destaques.css";
-import "../../css/clientes.css";
-import "../../css/cases-home.css";
-import "../../css/metodologia.css";
+import "../../css/pq-escolher.css";
 import "../../css/footer.css";
 import "../../css/menu-mobile.css";
-import "../../css/submenu.css";
 import "../../css/cores.css";
 import "../../css/componentes.css";
-import "../../css/fontes.css";
-import "../../css/solucoes.css";
 import "../../css/social-sidebar.css";
-import "../../css/popup.css";
 import "../../css/btn-float.css";
+import "../../css/potencialize-resultados.css";
+import "../../css/agentes-inteligentes.css";
+import "../../css/formulario-contato.css";
 
 import MenuMobile from '../modules/menu-mobile.js';
 import HeaderScroll from '../modules/header-scroll.js';
 import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
 import VideoPreload from "../modules/VideoPreload.js";
-import { updateBackgrounds } from "../modules/updateBackgrounds.js";
-import EbookForm from "../modules/ebookForm.js";
-import EbookPopup from "../modules/ebookPopup.js";
-import {
-    MySwiperSolucoes, 
-    MySwiperCases 
-  } from "../modules/myswiper.js";
-import renderizarSubmenu from '../modules/cases/renderizarSubmenu.js';
-import renderizarSwiper from "../modules/cases/renderizarSwiper.js";
 import AnalyticsLoader from '../modules/analyticsLoader.js';
+import VideoPopup from '../modules/VideoPopup.js';
+import SwiperAgentsSlider from '../modules/SwiperAgentsSlider.js';
+
+// 1. Importe primeiro o CSS das fontes
+import "../../css/fonts.css";
+
+// 2. Importe o Font Awesome (versão completa ou otimizada)
+import '@fortawesome/fontawesome-free/css/all.min.css'; // Todos os ícones
+// OU (versão otimizada):
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
+import '@fortawesome/fontawesome-free/css/brands.min.css';
+import '@fortawesome/fontawesome-free/css/solid.min.css';
+
+// 3. Importe a fonte Inter
+// Importe os pesos necessários
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM completamente carregado.");
@@ -59,36 +64,34 @@ document.addEventListener('DOMContentLoaded', () => {
         headerScroll.init();
     }
 
+    const thumbnailEl = document.querySelector('#videoThumbnail');
+    if (thumbnailEl) {
+      const videoPopup = new VideoPopup(
+        '#videoThumbnail',
+        '#videoPopup',
+        '#videoElement', 
+        '#closePopup',
+        '../videos/lancamento.mp4'
+      );
+      videoPopup.init();
+    }
+
     // Animações de abertura e scroll
     initPageOpenAnimations();
     initScrollAnimations();
 
-    // Popup do e-book
-    new EbookPopup();
-    new EbookForm();
     new VideoPreload();
 
-    // Sliders
-    new MySwiperSolucoes();
-    new MySwiperCases();
 
     // Inicializa a classe
     new AnalyticsLoader();
 
-    updateBackgrounds();
-    window.addEventListener("resize", updateBackgrounds);
-
     new FormHandler();
 
-    // JSON dos cases
-    const submenuCasesEl = document.querySelector('.submenu-cases');
-    const swiperWrapperEl = document.querySelector('.cases-slides .swiper-wrapper');
-
-    if (submenuCasesEl) {
-        renderizarSubmenu('.submenu-cases', '../cases.json');
+    const swiperEl = document.querySelector('.agents-swiper');
+    if (swiperEl) {
+        new SwiperAgentsSlider();
     }
 
-    if (swiperWrapperEl) {
-        renderizarSwiper('.cases-slides .swiper-wrapper', '../cases.json');
-    }
+
 });

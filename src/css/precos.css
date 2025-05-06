@@ -1,0 +1,326 @@
+
+.page-precos .menu li a,
+.page-precos .menu li span {
+  color: #fff; /* ou var(--bg-branco) */
+}
+
+.page-precos #contato-link {
+  background-color: var(--secondary);
+} 
+  /* Seção de planos */
+  .planos-section {
+    position: relative;
+    padding: 200px 0 80px;
+    background: linear-gradient(to bottom, var(--primary) 0%, var(--primary) 30%, var(--bg-branco) 30%, var(--bg-branco) 100%);
+    overflow: hidden;
+  }
+  
+  .planos-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 500px;
+    background: var(--primary);
+    z-index: 1;
+  }
+  
+  /* Cabeçalho */
+  .planos-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50px);
+    margin-bottom: -30px;
+  }
+  
+  .planos-header h1 {
+    font: 700 3rem/1.2 'Inter', sans-serif;
+    color: var(--textwhite);
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .planos-header p {
+    font: 400 1.25rem/1.6 'Inter', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+  }
+  
+  /* Grid de planos */
+  .planos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Cards de planos */
+  .plano {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    background: var(--bg-branco);
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(var(--primary-rgb), 0.15);
+    padding: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    border: none;
+  }
+  
+  .plano:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(var(--primary-rgb), 0.2);
+  }
+  
+  .plano-destaque {
+    position: relative;
+    border: 2px solid var(--primary);
+    transform: scale(1.03);
+    overflow: hidden; /* Importante para o efeito de dobrado */
+    background: var(--bg-branco);
+    z-index: 1;
+  }
+  
+  /* Selo "Mais Popular" ajustado para conviver com o dobrado */
+  .plano-destaque::before {
+    content: "Mais Popular";
+    position: absolute;
+    top: 20px;
+    right: -36px;
+    background: var(--degradeazul);
+    color: var(--textwhite);
+    padding: 5px 30px;
+    font-size: 12px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    transform-origin: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 3; /* Garante que fique acima do dobrado */
+  }
+  
+  /* Efeito hover refinado */
+  .plano-destaque:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(var(--primary-rgb), 0.2);
+  }
+  
+
+  
+  .plano h2 {
+    color: var(--primary);
+    font: 700 2.25rem/1.2 'Inter', sans-serif;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .plano > p {
+    color: var(--text);
+    font: 700 1rem/1.2 'Inter', sans-serif;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .plano > span:not(.preco) {
+    display: block;
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .plano > p:not(:first-of-type) {
+    font-weight: 600;
+    color: var(--primary);
+    margin: 25px 0 15px 0;
+    font-size: 16px;
+  }
+  
+  .plano ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .plano ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.5;
+    position: relative;
+  }
+  
+  .preco {
+    display: block;
+    font: 700 1.4rem/1.2 'Inter', sans-serif;
+    color: var(--primary);
+    margin: 25px 0;
+  }
+
+  .contato-plano {
+    display: block;
+    margin: 25px 0;
+  }
+  
+  .contato-plano a {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background: rgba(var(--primary-rgb), 0.08); /* Fundo ultra transparente */
+    color: var(--secondary); /* Cor do texto azul */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: 1.5px solid rgba(var(--secondary-rgb), 0.3); /* Borda sutil azul */
+    backdrop-filter: blur(2px); /* Efeito de vidro moderno */
+  }
+  
+  .contato-plano a:hover {
+    background: rgba(var(--secondary-rgb), 0.1); /* Leve aumento de transparência */
+    border-color: var(--secondary); /* Borda azul mais forte */
+    box-shadow: 0 2px 12px rgba(var(--secondary-rgb), 0.1); /* Sombra sutil azul */
+    transform: translateY(-1px);
+  }
+  
+  .btn-comprar {
+    width: 100%;
+    padding: 14px 6px;
+    background: var(--secondary);
+    text-align: center;
+    color: var(--textwhite);
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+    width: 100%;
+
+  }
+  
+  .btn-comprar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .recursos {
+    border-top: 1px solid var(--bgroxo);
+    padding-top: 20px;
+  }
+  
+  .recursos h3 {
+    font: 600 1.2rem/1.2 'Inter', sans-serif;
+    color: var(--primary);
+    margin-bottom: 15px;
+  }
+  
+  .recursos ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .recursos ul li {
+    margin-bottom: 10px;
+    font: 400 0.9rem/1.2 'Inter', sans-serif;
+    padding-left: 22px;
+    position: relative;
+  }
+  
+  .recursos ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+  }
+  
+  .recursos ul li.sim::before {
+    content: "✓";
+    color: var(--secondary);
+  }
+  
+  .recursos ul li.nao::before {
+    content: "✕";
+    color: #FF6B6B;
+  }
+  
+  /* Versão Mobile Otimizada */
+@media (max-width: 768px) {
+    .planos-section {
+      background: linear-gradient(to bottom, var(--primary) 0%, var(--primary) 15%, var(--bg-branco) 15%, var(--bg-branco) 100%);
+      padding: 40px 0 30px;
+    }
+  
+    .planos-header {
+      padding: 25px 15px;
+      transform: translateY(-20px);
+      margin-bottom: -10px;
+      backdrop-filter: blur(5px);
+    }
+  
+    .planos-header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+  
+    .planos-header p {
+      font-size: 1rem;
+    }
+  
+    .planos-grid {
+      padding: 20px 10px;
+      gap: 30px;
+    }
+  
+    .plano {
+      min-width: 100%;
+      padding: 25px 20px;
+      margin-top: 10px;
+    }
+  
+    /* Nova versão do selo "Mais Popular" para mobile */
+    .plano-destaque::before {
+      content: "★ Mais Popular ★";
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      left: auto;
+      background: var(--degradeazul);
+      color: var(--textwhite);
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 20px;
+      transform: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      width: fit-content;
+      z-index: 3;
+    }
+  
+    .btn-comprar, .contato-plano a {
+      padding: 12px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  
