@@ -8,13 +8,13 @@
   opacity: 0;
 }
 
-
 .header.header-scrolled  {
   background-color: var(--bg-branco); 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-}
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* sombra sutil inferior */
 
+}
 
 .logo-svg {
   display: block;
@@ -23,12 +23,8 @@
   transition: width 0.3s ease-in-out;
 }
 
-.header-scrolled .logo-svg {
-  width: 200px !important;
-}
-
 .header-scrolled .header_menu {
-  padding: .2rem 0;
+  padding: .4rem 0;
 }
 
 .header_menu {
@@ -91,7 +87,7 @@ ul[data-menu="list"] {
 
 .header-scrolled .menu li a,
 .header-scrolled .menu li span {
-  font: 500 0.8rem 'Inter', sans-serif;
+  font: 500 0.9rem 'Inter', sans-serif;
 }
 
 #contato-link {
