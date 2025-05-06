@@ -1,7 +1,11 @@
 
 .page-precos .menu li a,
 .page-precos .menu li span {
-  color: #fff; /* ou var(--bg-branco) */
+  color: var(--textwhite); /* ou var(--bg-branco) */
+}
+
+.page-precos .header-scrolled .menu li a {
+  color: var(--text); 
 }
 
 .page-precos #contato-link {
@@ -10,7 +14,7 @@
   /* Seção de planos */
   .planos-section {
     position: relative;
-    padding: 200px 0 80px;
+    padding: 140px 0 80px;
     background: linear-gradient(to bottom, var(--primary) 0%, var(--primary) 30%, var(--bg-branco) 30%, var(--bg-branco) 100%);
     overflow: hidden;
   }
