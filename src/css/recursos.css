@@ -62,13 +62,13 @@
 
 .recursos-header p {
     font: 400 1.25rem/1.6 'Inter', sans-serif;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--textwhite);
     margin-bottom: 15px;
 }
 
 .recursos-header .destaque {
-    font: 500 1.1rem/1.6 'Inter', sans-serif;
-    color: var(--textwhite);
+    font: 500 1rem/1.6 'Inter', sans-serif;
+    color:  rgba(255, 255, 255, 0.9);;
 }
 
 .recursos-grid {

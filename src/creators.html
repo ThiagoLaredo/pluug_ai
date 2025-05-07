@@ -36,18 +36,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet"></noscript>
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> -->
     <script>document.documentElement.className += ' js';</script>
 
   </head>
 
-  <body>
+  <body class="page-creators">
 
   
     <header class="header">
       <div class="container">
       <div class="header_menu">
         <a data-menu="logo" href="/">
+
           <svg width="135" class="logo-svg "height="32" viewBox="0 0 135 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M134.225 8.19964V23.9906H131.182V8.19964H134.225ZM130.573 2.38368C130.573 1.2002 131.52 0.388672 132.703 0.388672C133.887 0.388672 134.834 1.2002 134.834 2.38368C134.834 3.56716 133.887 4.37869 132.703 4.37869C131.52 4.37869 130.573 3.56716 130.573 2.38368Z" fill="url(#paint0_radial_1_7350)"/>
             <path d="M122.888 23.9694V21.5348C121.84 23.2931 119.541 24.3075 117.343 24.3075C113.015 24.3075 109.329 21.0614 109.329 16.057C109.329 11.0187 113.015 7.84024 117.343 7.84024C119.541 7.84024 121.806 8.75321 122.888 10.5453V8.17838H125.931V23.9694H122.888ZM122.854 16.0232C122.854 12.6418 120.183 10.8497 117.613 10.8497C114.773 10.8497 112.474 12.9123 112.474 16.0232C112.474 19.134 114.773 21.2981 117.613 21.2981C120.42 21.2981 122.854 19.3707 122.854 16.0232Z" fill="url(#paint1_radial_1_7350)"/>
@@ -103,7 +103,7 @@
               <li><a href="./creators.html">Depoimentos</a></li>
               <li><a href="./sobre.html">Sobre Nós</a></li>
               <li><a href="./precos.html">Planos</a></li>
-              <li><a href="#entre-em-contato" id="contato-link" class="scroll-to-contact">Criar conta</a></li>   
+              <li><a href="#entre-em-contato" id="contato-link" class="scroll-to-contact">Criar conta</a></li>           
             </ul>        
           </nav>
       </div>
@@ -112,326 +112,133 @@
 
     <a data-menu="contato-mobile" href="mailto:gestao@agenciakottler.com" target="_blank">gestao@agenciakottler.com</a>
     <a data-menu="linkedin" href="https://br.linkedin.com/company/agencia-kottler" target="_blank" loading="lazy">
-      <img src="./imgs/icones/linkedin.svg" alt="icone Linkedin mobile" width="32" height="32">
+      <img src="./img/linkedin.svg" alt="icone Linkedin mobile" width="32" height="32">
       <span class="visually-hidden">Ir para o Linkedin</span>
     </a>
     <a data-menu="instagram" href="https://www.instagram.com/agenciakottler/" target="_blank">
-      <img src="./imgs/icones/instagram-footer.svg" alt="icone Instagram mobile" width="32" height="32" loading="lazy">
+      <img src="./img/instagram.svg" alt="icone Instagram mobile" width="32" height="32" loading="lazy">
       <span class="visually-hidden">Ir para o Instagram</span>
     </a>
 
 
-    <div class="video-section">
-      <!-- SVG decorativo -->
-      <div class="grafismo-invertido-wrapper">
-        <img src="./imgs/grafismo-invertido.svg" alt="Grafismo decorativo" />
-      </div>
-    
-      <!-- Conteúdo principal -->
+    <section class="creators-header">
       <div class="container">
-        <div class="text-content">
-          <h1>Criação de conteúdo que conecta, engaja e liberta!</h1>
-          <p>A pluug.ai transforma suas ideias em conteúdos autênticos que engajam e convertem, com a ajuda da IA.</p>
-          <button class="btn-lista-espera scroll-to-contact" data-target="#entre-em-contato">
-            Quero entrar para a lista de espera
+        <div class="creators-header-texto">
+          <h1> Histórias reais de quem está mudando a forma de produzir conteúdo, todos os dias com a Pluug.ai</h1>
+          <p>
+            Veja como eles estão escalando seus negócios
+            no digital.
+          </p>
+          <button class="btn-azul">
+            <a href="#entre-em-contato">Quero testar</a>
           </button>
         </div>
-    
-        <!-- Thumbnail clicável -->
-        <div class="video-thumbnail" id="videoThumbnail">
-          <picture>
-            <source
-              type="image/avif"
-              srcset="
-                ./imgs/thumbnail-video-600.avif 600w,
-                ./imgs/thumbnail-video-1200.avif 1200w,
-                ./imgs/thumbnail-video-1920.avif 1920w
-              "
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <source
-              type="image/webp"
-              srcset="
-                ./imgs/thumbnail-video-600.webp 600w,
-                ./imgs/thumbnail-video-1200.webp 1200w,
-                ./imgs/thumbnail-video-1920.webp 1920w
-              "
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-            <img
-              src="./imgs/thumbnail-video.webp"
-              alt="Descrição do vídeo"
-              loading="lazy"
-              width="400"
-              height="300"
-            />
-          </picture>
-          
-          <div class="play-icon">&#9658;</div> <!-- ícone play -->
-        </div>
-      </div>
-    </div>
-    
-    <!-- Pop-up do vídeo -->
-    <div class="video-popup" id="videoPopup">
-      <div class="video-popup-inner">
-        <button class="close-popup" id="closePopup">&times;</button>
-        <video id="videoElement" controls preload="metadata">
-          <source src="" type="video/mp4">
-          Seu navegador não suporta vídeos HTML5.
-        </video>
-      </div>
-    </div>
-
-    <!-- Pq escolher -->
-    <section class="porque-escolher">
-      <div class="container">
-        <h2>Por que escolher a pluug.ai?</h2>
-    
-        <div class="cards">
-          <div class="card-item">
-            <picture>
-              <source
-                type="image/avif"
-                srcset="
-                  ./imgs/liberdade-600.avif 600w,
-                  ./imgs/liberdade-1200.avif 1200w,
-                  ./imgs/liberdade-1920.avif 1920w
-                "
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <source
-                type="image/webp"
-                srcset="
-                  ./imgs/liberdade-600.webp 600w,
-                  ./imgs/liberdade-1200.webp 1200w,
-                  ./imgs/liberdade-1920.webp 1920w
-                "
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <img
-                src="./imgs/liberdade.jpg"
-                alt="Mulher sorrindo trabalhando no computador com expressão de liberdade"
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-            </picture>
-            <h3>Liberdade</h3>
-            <p>A nossa Inteligência Artificial foi criada para trabalhar com você, porque criar conteúdo não precisa ser exaustivo.</p>
-          </div>
-        
-          <div class="card-item">
-            <picture>
-              <source
-                type="image/avif"
-                srcset="
-                  ./imgs/autenticidade-600.avif 600w,
-                  ./imgs/autenticidade-1200.avif 1200w,
-                  ./imgs/autenticidade-1920.avif 1920w
-                "
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <source
-                type="image/webp"
-                srcset="
-                  ./imgs/autenticidade-600.webp 600w,
-                  ./imgs/autenticidade-1200.webp 1200w,
-                  ./imgs/autenticidade-1920.webp 1920w
-                "
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <img
-                src="./imgs/autenticidade.jpg"
-                alt="Pessoa autêntica mostrando seu trabalho criativo"
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-            </picture>
-            <h3>Autenticidade</h3>
-            <p>Crie conteúdos personalizados que refletem a sua essência.</p>
-          </div>
-        
-          <div class="card-item">
-            <picture>
-              <source
-                type="image/avif"
-                srcset="
-                  ./imgs/crescimento-rapido-600.avif 600w,
-                  ./imgs/crescimento-rapido-1200.avif 1200w,
-                  ./imgs/crescimento-rapido-1920.avif 1920w
-                "
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <source
-                type="image/webp"
-                srcset="
-                  ./imgs/crescimento-rapido-600.webp 600w,
-                  ./imgs/crescimento-rapido-1200.webp 1200w,
-                  ./imgs/crescimento-rapido-1920.webp 1920w
-                "
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-              <img
-                src="./imgs/crescimento-rapido.jpg"
-                alt="Gráfico de crescimento exponencial mostrando progresso rápido"
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-            </picture>
-            <h3>Crescimento rápido</h3>
-            <p>Produza mais, com menos esforço, e veja seus resultados escalarem.</p>
-          </div>
-        </div>
-    
-        <div class="btn-wrapper">
-          <button class="btn-desconto scroll-to-contact" data-target="#entre-em-contato">Cadastre-se e tenha descontos exclusivos</button>
+        <div class="creators-header-imagem">
+          <img src="./imgs/img_diana.png" alt="Imagem Diana">
         </div>
       </div>
     </section>
-
-    <!-- Potencialize seus resultados -->
-    <section class="potencialize-resultados">
-      <div class="container">
-        <h2>Potencialize seus resultados no Instagram <br>e outras redes sociais</h2>
-        
-        <div class="cards-container">
-          <div class="card">
-            <div class="card-icon">
-              <img src="./imgs/icones/Gzinho.svg" alt="Ícone de consistência">
-            </div>
-            <div class="card-content">
-              <p>Crie conteúdo de forma rápida, estratégica e otimizada.</p>
-              <p>Posicione-se com consistência e frequência. Agora é a sua vez de se destacar.</p>
-              <h5>+Consistência</h5>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-icon">
-              <img src="./imgs/icones/Gzinho.svg" alt="Ícone de frequência">
-            </div>
-            <div class="card-content">
-              <p>Simplifique a criação de conteúdo com nossos Agentes Inteligentes.</p>
-              <p>Produza conteúdos que conquistam seguidores, aumentam seu alcance e posicionam você como referência.</p>
-              <h5>+Frequência</h5>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-icon">
-              <img src="./imgs/icones/Gzinho.svg" alt="Ícone de agilidade">
-            </div>
-            <div class="card-content">
-              <p>Chega de quebrar a cabeça com prompts complicados, em minutos, você terá conteúdos personalizados para as suas redes.</p>
-              <p>Posts prontos, otimizados e feitos para engajar.</p>
-              <h5>+Agilidade</h5>
-            </div>
-          </div>
-        </div>
-        
-        <div class="button-container">
-          <button class="cta-button scroll-to-contact" data-target="#entre-em-contato">Quero entrar para a lista de espera</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Agentes-inteligentes -->
-    <section class="agentes-inteligentes">
-      <div class="container">
-        <div class="content-wrapper">
-          <div class="text-content">
-            <h2>Como os Agentes <br>Inteligentes podem <br>ajudar no seu negócio?</h2>
-            <ul class="features-list">
-              <li>Avaliando seu perfil do Instagram e te apresentando sugestões de melhorias.</li>
-              <li>Criando mensagens que se conectam com seu público.</li>
-              <li>Mapeando as dores ocultas da sua persona.</li>
-              <li>Criando uma estratégia de conteúdo para fortalecer sua presença digital</li>
-            </ul>
-          </div>
-          
-          <div class="image-content">
-            <picture>
-              <source
-                type="image/avif"
-                srcset="
-                  ./imgs/agentes-inteligentes-600.avif 600w,
-                  ./imgs/agentes-inteligentes-1200.avif 1200w,
-                  ./imgs/agentes-inteligentes-1920.avif 1920w
-                "
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <source
-                type="image/webp"
-                srcset="
-                  ./imgs/agentes-inteligentes-600.webp 600w,
-                  ./imgs/agentes-inteligentes-1200.webp 1200w,
-                  ./imgs/agentes-inteligentes-1920.webp 1920w
-                "
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <img
-                src="./imgs/agentes-inteligentes.jpg"
-                alt="Agentes Inteligentes em ação"
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-            </picture>            
-          </div>
-        </div>
-        
-        <div class="additional-features">
-          <h3>Além disso, os nossos 9 Agentes Inteligentes vão poder te ajudar com:</h3>
-          <section class="agents-section">
-            <div class="swiper agents-swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide agent-card">
-                  <img src="./imgs/icones/copywrite-para-anuncios.svg" alt="Ícone Copywrite">
-                  <h4>Copywrite para Anúncios</h4>
-                </div>
-                <div class="swiper-slide agent-card">
-                  <img src="./imgs/icones/conteudo-carrossel.svg" alt="Ícone Carrossel">
-                  <h4>Conteúdo para Carrossel</h4>
-                </div>
-                <div class="swiper-slide agent-card">
-                  <img src="./imgs/icones/roteiro-reels.svg" alt="Ícone Reels">
-                  <h4>Roteiro para Reels</h4>
-                </div>
-                <div class="swiper-slide agent-card">
-                  <img src="./imgs/icones/calendario-conteudo.svg" alt="Ícone Calendário">
-                  <h4>Calendário para Conteúdo</h4>
-                </div>
-                <div class="swiper-slide agent-card">
-                  <img src="./imgs/icones/estrategia-editoriais.svg" alt="Ícone Editoriais">
-                  <h4>Estratégias de Editoriais</h4>
-                </div>
-                <div class="swiper-slide agent-card">
-                  <img src="./imgs/icones/conteudo-campanhas.svg" alt="Ícone Campanhas">
-                  <h4>Conteúdo para Campanhas</h4>
-                </div>
-                <div class="swiper-slide agent-card">
-                  <img src="./imgs/icones/conteudo-stories.svg" alt="Ícone Stories">
-                  <h4>Conteúdo para Stories</h4>
-                </div>
-                <div class="swiper-slide agent-card">
-                  <img src="./imgs/icones/legendas-atraentes.svg" alt="Ícone Legendas">
-                  <h4>Legendas Atraentes</h4>
-                </div>
-                <div class="swiper-slide agent-card">
-                  <img src="./imgs/icones/criacao-titulos-virais.svg" alt="Ícone Títulos">
-                  <h4>Criação de Títulos Virais</h4>
-                </div>
+            
+    <section class="creators-depoimentos container">
+      <h2>Criadores que já estão revolucionando sua produção</h2>  
+      <div class="swiper swiper-depoimentos">
+          <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                  <div class="card-depoimentos-content">
+                      <div class="depoimento-imagem">
+                          <img src="./imgs/imagem_box.jpg" alt="Diana - Criadora de Conteúdo">
+                      </div>
+                      <div class="depoimento-texto">
+                          <h3>Diana Souza</h3>
+                          <p>"A pluug.ai transformou minha rotina de criação. De 3 posts por semana para 10, com muito mais qualidade!"</p>
+                          <p>Engajamento aumentou em 140% após 2 meses usando o Trend AI.</p>
+                          <p>Economizo 12 horas semanais com automações.</p>
+                      </div>
+                  </div>
               </div>
-              <div class="swiper-scrollbar"></div>
-            </div>
-          </section>          
-        </div>
+              
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                  <div class="card-depoimentos-content">
+                      <div class="depoimento-imagem">
+                          <img src="./imgs/imagem_box.jpg" alt="Carlos - Marketing Digital">
+                      </div>
+                      <div class="depoimento-texto">
+                          <h3>Carlos Mendes</h3>
+                          <p>"O Creator Genie é meu assistente pessoal. Produzo conteúdo para 5 clientes sem estresse."</p>
+                          <p>Reduzi o tempo de produção de conteúdo em 65%.</p>
+                          <p>Clientes aprovaram 98% dos conteúdos gerados.</p>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                  <div class="card-depoimentos-content">
+                      <div class="depoimento-imagem">
+                          <img src="./imgs/imagem_box.jpg" alt="Ana - Infoprodutora">
+                      </div>
+                      <div class="depoimento-texto">
+                          <h3>Ana Lúcia</h3>
+                          <p>"Com o Creator Builder, lancei meu curso em 15 dias, não em 3 meses como planejava."</p>
+                          <p>Estruturei 8 módulos com a IA em tempo recorde.</p>
+                          <p>Já teve 347 inscritos na primeira semana.</p>
+                      </div>
+                  </div>
+              </div>
+              
+              <!-- Slide 4 -->
+              <div class="swiper-slide">
+                  <div class="card-depoimentos-content">
+                      <div class="depoimento-imagem">
+                          <img src="./imgs/imagem_box.jpg" alt="Roberto - Agência Digital">
+                      </div>
+                      <div class="depoimento-texto">
+                          <h3>Roberto Vieira</h3>
+                          <p>"O Lead AI qualificou nossos contatos e aumentou nossas vendas em 200%."</p>
+                          <p>Taxa de conversão subiu de 3% para 9%.</p>
+                          <p>Equipe comercial 80% mais produtiva.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          <!-- Navegação -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          
+          <!-- Paginação -->
+          <div class="swiper-pagination"></div>
       </div>
     </section>
 
+    <section class="comparativo">
+      <div class="container">
+        <div class="comparativo-header">
+          <h2>Você ainda está criando conteúdo do jeito difícil?</h2>
+          <p>A Pluug é a melhor solução para creators, empreendedores e profissionais terem resultado nas redes sociais</p>
+        </div> 
+        <div class="comparativo-content">
+          <div class="comparativo-card">
+            <h3 class="antes-pluug">Antes da Pluug</h3>
+            <p>Perde Horas planejando o que postar.</p>
+            <p>Bloqueio criativo constante</p>
+            <p>Postagens aleatórias sem engajamento</p>
+            <p>Criação manual e demorada</p>
+          </div>
+          <div class="comparativo-card">
+            <h3 class="depois-pluug">Depois da Pluug</h3>
+            <p>Planejamento automático com IA</p>
+            <p>Sugestões personalizadas prontas para uso</p>
+            <p>Estratégias e postagens alinhas ao seu nicho</p>
+            <p>Agentes inteligentes otimizam todo o fluxo criativo</p>
+          </div>
+        </div> 
+      </div>
+ 
+    </section>
+    
     <section id="entre-em-contato" class="entre-em-contato">
       <div class="container">
         <!-- Formulário -->
@@ -505,7 +312,6 @@
         <div class="footer-content">
           <div class="footer-info">
             <img src="./imgs/icones/logo-branca.svg" alt="Logo Pluug.ai" class="footer-logo">
-            
             <div class="contact-links">
               <a href="https://wa.me/SEUNUMERO" class="contact-link" target="_blank" rel="noopener">
                 <img src="imgs/icones/whatsapp-icon2.svg" alt="WhatsApp" class="icon"> WhatsApp
@@ -520,7 +326,6 @@
                 <img src="imgs/icones/linkedin-footer.svg" alt="LinkedIn" class="icon"> pluug-ai
               </a>
             </div>
-            
           </div>
           
           <div class="footer-image">
@@ -530,6 +335,5 @@
       </div>
     </footer>
 
-   
   </body>
 </html>

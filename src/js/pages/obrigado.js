@@ -10,7 +10,6 @@ import "../../css/fontes.css";
 import "../../css/contato.css";
 import "../../css/social-sidebar.css";
 import "../../css/popup.css";
-import "../../css/btn-float.css";
 import "../../css/obrigado.css";
 
 import MenuMobile from '../modules/menu-mobile.js';
