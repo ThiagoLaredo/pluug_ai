@@ -98,36 +98,44 @@
     position: relative;
     border: 2px solid var(--primary);
     transform: scale(1.03);
-    overflow: hidden; /* Importante para o efeito de dobrado */
+    overflow: hidden;
     background: var(--bg-branco);
     z-index: 1;
   }
   
-  /* Selo "Mais Popular" ajustado para conviver com o dobrado */
-  .plano-destaque::before {
-    content: "Mais Popular";
+  .selo-favorito {
     position: absolute;
-    top: 20px;
-    right: -36px;
-    background: var(--degradeazul);
-    color: var(--textwhite);
-    padding: 5px 30px;
-    font-size: 12px;
-    font-weight: bold;
-    transform: rotate(45deg);
-    transform-origin: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    z-index: 3; /* Garante que fique acima do dobrado */
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4px;
+    color: #D13F5F;
+    font: 600 0.8rem/1 'Inter', sans-serif;
+    z-index: 3;
   }
+  
+  .selo-favorito .icone-coracao {
+    flex-shrink: 0;
+    margin-top: -2px;
+  }
+  
+  .selo-favorito .texto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    text-align: left;
+  }
+  
+  
   
   /* Efeito hover refinado */
   .plano-destaque:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 30px rgba(var(--primary-rgb), 0.2);
   }
-  
 
-  
   .plano h2 {
     color: var(--primary);
     font: 700 2.25rem/1.2 'Inter', sans-serif;
@@ -265,7 +273,7 @@
   
   .recursos ul li.nao::before {
     content: "✕";
-    color: #FF6B6B;
+    color: #D13F5F;
   }
   
   /* Versão Mobile Otimizada */
