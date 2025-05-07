@@ -1,30 +1,23 @@
 import "../../css/global.css";
-import "../../css/sobre.css";
+import "../../css/recursos.css";
 import "../../css/header.css";
 import "../../css/footer.css";
 import "../../css/menu-mobile.css";
-import "../../css/submenu.css";
 import "../../css/cores.css";
 import "../../css/componentes.css";
-import "../../css/social-sidebar.css";
-import "../../css/btn-float.css";
 import "../../css/formulario-contato.css";
+import "../../css/creators.css";
 
 import MenuMobile from '../modules/menu-mobile.js';
 import HeaderScroll from '../modules/header-scroll.js';
 import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
 import AnalyticsLoader from '../modules/analyticsLoader.js';
+import { SwiperDepoimentos } from '../modules/SwiperDepoimentos.js';
+import ScrollToSection from '../modules/ScrollToSection.js'
 
 // 1. Importe primeiro o CSS das fontes
 import "../../css/fonts.css";
-
-// 2. Importe o Font Awesome (versão completa ou otimizada)
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Todos os ícones
-// OU (versão otimizada):
-import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
-import '@fortawesome/fontawesome-free/css/brands.min.css';
-import '@fortawesome/fontawesome-free/css/solid.min.css';
 
 // 3. Importe a fonte Inter
 // Importe os pesos necessários
@@ -59,28 +52,27 @@ document.addEventListener('DOMContentLoaded', () => {
         headerScroll.init();
     }
 
-    const thumbnailEl = document.querySelector('#videoThumbnail');
-    if (thumbnailEl) {
-      const videoPopup = new VideoPopup(
-        '#videoThumbnail',
-        '#videoPopup',
-        '#videoElement', 
-        '#closePopup',
-        '../videos/lancamento.mp4'
-      );
-      videoPopup.init();
-    }
-
     // Animações de abertura e scroll
     initPageOpenAnimations();
     initScrollAnimations();
 
+    //scroll ancora
+    const scrollToContact = new ScrollToSection(".scroll-to-contact");
+    scrollToContact.init();
+
 
     // Inicializa a classe
     new AnalyticsLoader();
-
     new FormHandler();
 
-
-
+    // Verifica se estamos na página de creators
+    if (document.querySelector('.page-creators')) {
+        // Inicializa o Swiper apenas se o elemento existir
+        const swiperContainer = document.querySelector('.swiper-depoimentos');
+        if (swiperContainer) {
+            new SwiperDepoimentos();
+        } else {
+            console.warn('Container do Swiper não encontrado na página creators');
+        }
+    }
 });

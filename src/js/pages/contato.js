@@ -12,7 +12,6 @@ import "../../css/vender.css";
 import "../../css/contato.css";
 import "../../css/social-sidebar.css";
 import "../../css/popup.css";
-import "../../css/btn-float.css";
 
 import MenuMobile from '../modules/menu-mobile.js';
 import HeaderScroll from '../modules/header-scroll.js';

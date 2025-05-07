@@ -4,7 +4,11 @@
 }
 
 .page-sobre #contato-link {
-  background-color: var(--secondary);
+  background: radial-gradient(circle, rgba(19, 180, 238, 1) 0%, rgba(45, 248, 250, 1) 100%);
+}
+
+.page-sobre .header-scrolled .menu li a {
+  color: var(--text); 
 }
 
 .tecnologia {
@@ -46,17 +50,16 @@
 }
 
 .p-azul {
-  padding: 15px;
+  padding: 15px 20px;
   background-color: #30BBEB;
   color: #fff;
-  border-radius: 4px;
 }
 
 .tecnologia-imagem {
   position: absolute;
   bottom: 0;
   right: 0px;
-  max-width: 320px;
+  max-width: 340px;
   display: block;
 }
 
