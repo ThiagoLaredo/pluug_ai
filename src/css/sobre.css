@@ -3,12 +3,22 @@
   color: #fff; /* ou var(--bg-branco) */
 }
 
+.page-sobre #entrar-link {
+  color: var(--textwhite);
+  border: 2px solid var(--textwhite);
+} 
+
 .page-sobre #contato-link {
   background: radial-gradient(circle, rgba(19, 180, 238, 1) 0%, rgba(45, 248, 250, 1) 100%);
 }
 
 .page-sobre .header-scrolled .menu li a {
   color: var(--text); 
+}
+
+.page-sobre .header-scrolled #entrar-link {
+  color: var(--text); 
+  border: 2px solid var(--text);
 }
 
 .tecnologia {

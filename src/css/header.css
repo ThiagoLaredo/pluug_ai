@@ -104,6 +104,20 @@ ul[data-menu="list"] {
   color: #fff;
 }
 
+#entrar-link {
+  border-radius: 20px; 
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  border: 2px solid var(--primary); 
+  color: var(--primary);  
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#contato-link:hover {
+  background-color: var(--primary); 
+  color: #fff;
+}
+
 /* Estilo adicional para o mobile */
 @media (max-width: 768px) {
   .header {
