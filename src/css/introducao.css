@@ -178,7 +178,7 @@
   .video-section .container {
     flex-direction: column;
     gap: 30px;
-    padding: 0 1.5rem; /* menos espaço lateral no mobile */
+    padding: 0;
   }
 
   .video-section .text-content h1 {
@@ -198,6 +198,11 @@
     height: 50px;
     font-size: 1.8rem;
   }
+
+  .grafismo-invertido-wrapper {
+    bottom: -30px;
+  }
+
 }
 
 @media (max-width: 480px) {
