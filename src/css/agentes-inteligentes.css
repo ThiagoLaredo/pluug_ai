@@ -68,8 +68,6 @@
   .swiper.agents-swiper {
     width: 100%;
     padding-bottom: 2rem;
-    background: rgba(19, 180, 238, 0.05);
-    border-radius: 16px;
   }
   
   .swiper-slide.agent-card {
@@ -131,7 +129,7 @@
   }
   
   .agent-card h4 {
-    font: 600 0.8rem/1.4 'Inter', sans-serif;
+    font: 600 0.9rem/1.4 'Inter', sans-serif;
     color: var(--text);
     margin: 0;
   }
@@ -139,7 +137,7 @@
   /* Responsividade */
   @media (max-width: 768px) {
     .agentes-inteligentes {
-      padding: 40px 20px;
+      padding: 40px 0px;
     }
     .content-wrapper {
       flex-direction: column;
@@ -149,12 +147,17 @@
       flex: 1 1 100%;
     }
     
-    .text-content h2 {
-      font-size: 2rem;
+    .agentes-inteligentes .text-content h2 {
+      font: 700 2rem/1.2 'Inter', sans-serif;
+      text-align: center;
     }
     
     .agents-grid {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .swiper-scrollbar {
+      width: 200px !important;
     }
   }
   
@@ -165,5 +168,6 @@
     
     .additional-features h3 {
       font-size: 1.25rem;
+      text-align: center;
     }
   }
