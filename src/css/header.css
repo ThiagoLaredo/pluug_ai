@@ -9,9 +9,9 @@
 }
 
 .header.header-scrolled  {
-  background-color: var(--bg-branco); 
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  background-color: transparent;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* sombra sutil inferior */
 
 }
@@ -85,10 +85,10 @@ ul[data-menu="list"] {
   padding: 0.5rem; 
 }
 
-.header-scrolled .menu li a,
+/* .header-scrolled .menu li a,
 .header-scrolled .menu li span {
   font: 500 0.9rem 'Inter', sans-serif;
-}
+} */
 
 #contato-link {
   border-radius: 20px; 
@@ -101,14 +101,14 @@ ul[data-menu="list"] {
 }
 
 #contato-link:hover {
-  background-color: var(--secondary); 
-  border: 2px solid var(--secondary); 
+  background-color: #7C68DC; 
+  border: 2px solid #7C68DC; 
   color: #fff;
 }
 
 #entrar-link {
   border-radius: 20px; 
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 2.17rem;
   text-decoration: none;
   border: 2px solid var(--primary); 
   color: var(--primary);  

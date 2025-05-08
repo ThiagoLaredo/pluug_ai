@@ -245,6 +245,7 @@
   .btn-comprar:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    background-color: #38C7F2;
   }
   
   .recursos {
