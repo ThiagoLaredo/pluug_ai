@@ -4,13 +4,24 @@
   color: var(--textwhite); /* ou var(--bg-branco) */
 }
 
+.page-precos #entrar-link {
+  color: var(--textwhite);
+  border: 2px solid var(--textwhite);
+} 
+
+.page-precos #contato-link {
+  background: radial-gradient(circle, rgba(19, 180, 238, 1) 0%, rgba(45, 248, 250, 1) 100%);
+} 
+
 .page-precos .header-scrolled .menu li a {
   color: var(--text); 
 }
 
-.page-precos #contato-link {
-  background-color: var(--secondary);
-} 
+.page-precos .header-scrolled #entrar-link {
+  color: var(--text); 
+  border: 2px solid var(--text);
+}
+
   /* Seção de planos */
   .planos-section {
     position: relative;
@@ -280,7 +291,7 @@
 @media (max-width: 768px) {
     .planos-section {
       background: linear-gradient(to bottom, var(--primary) 0%, var(--primary) 15%, var(--bg-branco) 15%, var(--bg-branco) 100%);
-      padding: 40px 0 30px;
+      padding: 120px 0 30px;
     }
   
     .planos-header {
@@ -330,7 +341,7 @@
     }
   
     .btn-comprar, .contato-plano a {
-      padding: 12px;
+      padding: 12px 2px;
       font-size: 0.95rem;
     }
   }
