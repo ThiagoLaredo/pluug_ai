@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '[data-menu="button"]',
         '[data-menu="list"]',
         '[data-menu="contato-mobile"]',
+        '[data-menu="whatsapp"]',
         '[data-menu="linkedin"]',
         '[data-menu="instagram"]'
     );

@@ -48,8 +48,9 @@
     position: relative;
     z-index: 2;
     display: flex;
-flex-direction: column;
-gap: 60px;}
+    flex-direction: column;
+    gap: 60px;
+}
 
 .recursos-header {
    display: flex;

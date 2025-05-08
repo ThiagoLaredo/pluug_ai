@@ -16,6 +16,10 @@
  display: none;
 }
 
+[data-menu="whatsapp"] {
+  display: none;
+}
+
 [data-menu="linkedin"] {
   display: none;
 }
@@ -36,7 +40,8 @@
 
   .js [data-menu="button"] {
     display: flex;
-    background-color: var(--secondary); 
+    /* background-color: var(--secondary);  */
+    background: radial-gradient(circle, rgba(19, 180, 238, 1) 0%, rgba(45, 248, 250, 1) 100%);;
     border: none;
     padding: 0.6rem; 
     border-radius: 50%; 
@@ -136,7 +141,7 @@
     display: none;
   }
 
-  [data-menu="contato-mobile"], [data-menu="linkedin"], [data-menu="instagram"] {
+  [data-menu="contato-mobile"], [data-menu="linkedin"], [data-menu="whatsapp"], [data-menu="instagram"] {
     display: none;
   }
 
@@ -159,6 +164,18 @@
     display: block;
     bottom: 0;
     right: 0;
+    z-index: 999;
+    padding: 1rem;
+    opacity: 0;
+  }
+
+  [data-menu="whatsapp"].active {
+    position: fixed;
+    font: 500 1rem 'OpenSans', sans-serif;
+    color: var(--roxo);
+    display: block;
+    bottom: 0;
+    right: 80px;
     z-index: 999;
     padding: 1rem;
     opacity: 0;
