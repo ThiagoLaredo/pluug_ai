@@ -424,5 +424,9 @@
   .comparativo-content {
     flex-direction: column;
   }
+
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -40px;
+  }
   
 }
