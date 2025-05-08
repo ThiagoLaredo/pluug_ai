@@ -40,7 +40,7 @@
 
 .recursos-section {
     position: relative;
-    padding: 100px 0 80px;
+    padding: 6.5rem 0 5rem;
     background: linear-gradient(to bottom, var(--primary) 0%, var(--primary) 30%, rgba(var(--primary-rgb), 0.2) 30%, rgba(var(--primary-rgb), 0.2) 100%);
 }
 
@@ -163,7 +163,6 @@ gap: 60px;}
 /* Responsivo */
 @media (max-width: 768px) {
     .recursos-section {
-        padding: 100px 0 50px;
         background: linear-gradient(to bottom, var(--primary) 0%, var(--primary) 15%, var(--bg-branco) 15%, var(--bg-branco) 100%);
     }
     
