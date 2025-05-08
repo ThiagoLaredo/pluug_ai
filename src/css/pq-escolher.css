@@ -1,5 +1,9 @@
 .porque-escolher {
-    padding: 6rem 0rem 4rem;
+    padding: 7rem 0 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
   }
   
   .porque-escolher .container {
@@ -10,7 +14,6 @@
   
   .porque-escolher h2 {
     font: 700 2.5rem 'Inter', sans-serif;
-    margin-bottom: 40px;
     color: var(--text);
   }
   
@@ -53,16 +56,12 @@
     color: var(--text);
   }
   
-  .btn-wrapper {
-    margin-top: 4rem;
-  }
-  
   .btn-desconto {
     background-color: var(--primary);
     color: #fff;
     border: none;
     padding: 1.2rem 2.5rem;
-    font: 600 1rem 'Inter', sans-serif;
+    font: 600 1rem/1.2 'Inter', sans-serif;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease; 
@@ -77,8 +76,14 @@
   /* Responsividade */
   @media (max-width: 768px) {
 
+    .porque-escolher {
+      padding: 5rem 1.5rem;
+      align-items: center;
+    }
+
     .porque-escolher h2 {
       font: 700 2rem 'Inter', sans-serif;
+      text-align: center;
     }
 
     .cards {
@@ -88,6 +93,10 @@
   
     .card-item {
       max-width: 100%;
+    }
+
+    .btn-desconto {
+      text-align: center;
     }
   }
   

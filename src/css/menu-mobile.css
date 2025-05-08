@@ -123,8 +123,8 @@
   }
 
   .js [data-menu="list"] a, .js [data-menu="list"] span, .js [data-menu="list"] .submenu a {
-    font-size: 20px;
-    line-height: 1;
+    font-size: 1.2rem;
+    line-height: 1.4;
     color: var(--textwhite);
   }
 

@@ -95,12 +95,14 @@ ul[data-menu="list"] {
   padding: 0.8rem 1rem;
   text-decoration: none;
   background-color: var(--primary); 
+  border: 2px solid var(--primary); 
   color: var(--bg-branco);  
   transition: background-color 0.3s, color 0.3s;
 }
 
 #contato-link:hover {
-  background-color: var(--primary); 
+  background-color: var(--secondary); 
+  border: 2px solid var(--secondary); 
   color: #fff;
 }
 
@@ -113,10 +115,11 @@ ul[data-menu="list"] {
   transition: background-color 0.3s, color 0.3s;
 }
 
-#contato-link:hover {
+#entrar-link:hover {
   background-color: var(--primary); 
   color: #fff;
 }
+
 
 /* Estilo adicional para o mobile */
 @media (max-width: 768px) {
@@ -148,15 +151,31 @@ ul[data-menu="list"] {
   font: 600 1rem 'Inter', sans-serif;
 }
 
+#entrar-link {
+  border-radius: 20px; 
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  border: 2px solid white; 
+  color: white;  
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+#contato-link {
+  border-radius: 20px; 
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  background-color: var(--secondary); 
+  border: 1px solid var(--secondary);
+  color: white;  
+  transition: background-color 0.3s, color 0.3s;
+}
+
   .header_menu {
     padding: 1rem 0;
   }
 
   .menu-button {
     display: none;
-  }
-
-  .contato-link {
-    border: none;
   }
 }
