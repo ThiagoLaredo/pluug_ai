@@ -1,8 +1,8 @@
-/* Estilos Gerais */
  
 .creators-depoimentos, 
 .comparativo {
-  padding: 80px 0;
+  padding: 5rem 0;
+  /* position: relative; */
 }
 
 .page-creators .menu li a,
@@ -26,7 +26,6 @@
   gap: 60px;
   align-items: center;
   justify-content: center;
-
 }
 
 .creators-header-texto {
@@ -42,13 +41,15 @@
 /* Container decorativo atrás das imagens */
 .mosaic-decoration {
   position: absolute;
-  top: -20px;
-  right: -70px;
+  bottom: 40px;
+  right: 40px;
   display: flex;
   align-items: flex-end;
   gap: 20px;
-  z-index: 0; /* Fica atrás das imagens */
+  z-index: 0; /* Mantém atrás das imagens */
+  width: max-content; /* <- impede que os filhos sejam comprimidos */
 }
+
 
 /* Estilo base dos retângulos */
 .decor-rect {
@@ -78,7 +79,6 @@
   border-color: var(--secondary);
   margin-left: 20px;
   margin-bottom: 80px;
-
 }
 
 .creators-header h1 {
@@ -209,13 +209,13 @@
 /* Navegação */
 .swiper-button-next,
 .swiper-button-prev {
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    background-color: var(--primary);
+    /* border: 2px solid var(--primary); */
     width: 50px !important;
     height: 50px !important;
     border-radius: 50%!important;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    /* backdrop-filter: blur(5px); */
+    /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
     transition: all 0.3s ease;
 }
 
@@ -228,7 +228,7 @@
 .swiper-button-prev::after {
     font-size: 24px !important;
     font-weight: bold;
-    color: var(--primary);
+    color: white;
 }
 
 /* Paginação */
@@ -367,4 +367,62 @@
 
 .comparativo-card p:last-child {
   border-bottom: none;
+}
+
+@media (max-width: 768px) {
+
+  .creators-header {
+    height: auto;
+  }
+
+  .creators-header .container {
+  padding: 6rem 1rem 5rem;
+  flex-direction: column;
+  }
+
+  .mosaic-decoration {
+    bottom: -180px;
+    top: auto; /* <- impede o conflito que pode centralizar */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .rect-small {
+    width: 60px;
+    height: 100px;
+  }
+
+  .rect-medium {
+    width: 120px;
+    height: 180px;
+  }
+
+  .rect-large {
+    width: 160px;
+    height: 230px;
+  }
+
+  .mosaic-large {
+    width: auto;
+  }
+
+  .card-depoimentos-content {
+    flex-direction: column;
+    gap: 0;
+    padding: 0 20px;
+  }
+
+  .depoimento-imagem img {
+    border-radius: 16px 16px 0px 0px;
+  }
+
+  .depoimento-texto {
+    border-radius: 0px 0px 16px 16px;
+    padding: 20px;
+  }
+
+  .comparativo-content {
+    flex-direction: column;
+  }
+  
 }

@@ -36,21 +36,18 @@
   /* Seção de planos */
   .planos-section {
     position: relative;
-    padding: 140px 0 80px;
+    padding: 6.5rem 0 5rem;
     background: linear-gradient(to bottom, var(--primary) 0%, var(--primary) 30%, var(--bg-branco) 30%, var(--bg-branco) 100%);
     overflow: hidden;
   }
-  
-  .planos-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 500px;
-    background: var(--primary);
-    z-index: 1;
+
+  .planos.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
   }
+  
   
   /* Cabeçalho */
   .planos-header {
@@ -62,11 +59,7 @@
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-    z-index: 3;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    transform: translateY(-50px);
-    margin-bottom: -30px;
   }
   
   .planos-header h1 {
@@ -88,9 +81,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
     position: relative;
     z-index: 2;
   }
@@ -302,18 +292,15 @@
 @media (max-width: 768px) {
     .planos-section {
       background: linear-gradient(to bottom, var(--primary) 0%, var(--primary) 15%, var(--bg-branco) 15%, var(--bg-branco) 100%);
-      padding: 120px 0 30px;
     }
   
     .planos-header {
       padding: 25px 15px;
-      transform: translateY(-20px);
-      margin-bottom: -10px;
       backdrop-filter: blur(5px);
     }
   
     .planos-header h1 {
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin-bottom: 15px;
     }
   
@@ -322,7 +309,6 @@
     }
   
     .planos-grid {
-      padding: 20px 10px;
       gap: 30px;
     }
   
@@ -349,6 +335,10 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       width: fit-content;
       z-index: 3;
+    }
+
+    .plano h2 {
+      font-size: 2rem;
     }
   
     .btn-comprar, .contato-plano a {
