@@ -1,39 +1,4 @@
-.page-precos .menu li a,
-.page-precos .menu li span {
-  color: var(--textwhite); /* ou var(--bg-branco) */
-}
-
-.page-precos .header-scrolled .menu li a {
-  color: var(--text); 
-}
-
-.page-precos .header-scrolled #entrar-link {
-    color: var(--text); 
-    border: 2px solid var(--text);
-}
-
-.page-precos #entrar-link {
-    color: var(--textwhite);
-    border: 2px solid var(--textwhite);
-    transition: background-color 0.3s, color 0.3s;
-} 
-
-.page-precos #entrar-link:hover {
-    color: var(--primary);
-    background: white;
-} 
-
-.page-precos #contato-link {
-    background: radial-gradient(circle, rgba(19, 180, 238, 1) 0%, rgba(45, 248, 250, 1) 100%);
-    border: 2px solid var(--secondary);
-    transition: background-color 0.3s, color 0.3s;
-} 
-
-.page-precos #contato-link:hover {
-    background: var(--secondary);
-} 
-
-  /* Seção de planos */
+/* Seção de planos */
   .planos-section {
     position: relative;
     padding: 6.5rem 0 5rem;

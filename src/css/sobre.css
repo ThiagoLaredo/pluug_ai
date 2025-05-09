@@ -23,7 +23,6 @@
 
 .tecnologia {
   background-color: #6751D1;
-  padding: 20px;
   color: #fff;
   height: 100vh;
   display: flex;
@@ -42,7 +41,7 @@
 
 .tecnologia-texto {
   flex: 1;
-  max-width: 82%;
+  max-width: 75%;
   margin-top: 40px;
 }
 

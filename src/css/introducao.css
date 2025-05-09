@@ -34,6 +34,7 @@
 }
 
 .btn-lista-espera {
+  display: inline-block;
   background-color: var(--primary);
   color: #fff;
   border: none;
@@ -41,12 +42,13 @@
   font: 600 1rem 'Inter', sans-serif;
   border-radius: 50px;
   cursor: pointer;
-  transition: all 0.3s ease; 
-  width: fit-content
+  transition: all 0.3s ease;
+  width: fit-content;
+  text-decoration: none; 
 }
 
 .btn-lista-espera:hover {
-  background-color: var(--secondary);
+  background-color: #7C68DC;
   transform: translateY(-2px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
