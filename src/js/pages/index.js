@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
         '[data-menu="contato-mobile"]',
         '[data-menu="whatsapp"]',
         '[data-menu="linkedin"]',
-        '[data-menu="instagram"]'
+        '[data-menu="instagram"]',
+        '.header_acoes' // Novo parâmetro
     );
     if (menuMobile) {
         console.log('MenuMobile initialized successfully');
