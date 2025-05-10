@@ -16,16 +16,6 @@ import AnalyticsLoader from '../modules/analyticsLoader.js';
 import { SwiperDepoimentos } from '../modules/SwiperDepoimentos.js';
 import ScrollToSection from '../modules/ScrollToSection.js'
 
-// 1. Importe primeiro o CSS das fontes
-import "../../css/fonts.css";
-
-// 3. Importe a fonte Inter
-// Importe os pesos necessários
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
-
-
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM completamente carregado.");
 

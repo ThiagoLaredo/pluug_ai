@@ -12,12 +12,6 @@ import "../../css/social-sidebar.css";
 import "../../css/popup.css";
 import "../../css/obrigado.css";
 
-import MenuMobile from '../modules/menu-mobile.js';
-import HeaderScroll from '../modules/header-scroll.js';
-import FormHandler from '../modules/formHandler.js';
-import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
-import EbookPopup from "../modules/ebookPopup.js";
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializa o menu mobile com submenu integrado, caso os elementos existam
