@@ -129,54 +129,38 @@ ul[data-menu="list"] {
   color: #fff;
 }
 
-.page-precos .menu li a,
-.page-precos .menu li span,
-.page-recursos .menu li a,
-.page-recursos .menu li span,
-.page-sobre .menu li a,
-.page-sobre .menu li span {
+:is(.page-precos, .page-recursos, .page-sobre) .menu li a,
+:is(.page-precos, .page-recursos, .page-sobre) .menu li span {
   color: var(--textwhite); /* ou var(--bg-branco) */
 }
 
-.page-precos .header-scrolled .menu li a,
-.page-recursos .header-scrolled .menu li a,
-.page-sobre .header-scrolled .menu li a {
-  color: var(--text); 
+:is(.page-precos, .page-recursos, .page-sobre) .header-scrolled .menu li a {
+  color: var(--text);
 }
 
-.page-precos .btn-login,
-.page-recursos .btn-login,
-.page-sobre .btn-login {
+:is(.page-precos, .page-recursos, .page-sobre) .btn-login {
   color: var(--textwhite);
   border: 2px solid var(--textwhite);
   transition: background-color 0.3s, color 0.3s;
 }
 
-.page-precos .header-scrolled .btn-login,
-.page-recursos .header-scrolled .btn-login,
-.page-sobre .header-scrolled .btn-login {
+:is(.page-precos, .page-recursos, .page-sobre) .header-scrolled .btn-login {
   color: var(--text);
   border: 2px solid var(--text);
 }
 
-.page-precos .btn-login:hover,
-.page-recursos .btn-login:hover,
-.page-sobre .btn-login:hover {
+:is(.page-precos, .page-recursos, .page-sobre) .btn-login:hover {
   color: var(--primary);
   background: white;
 }
 
-.page-precos .btn-cadastro,
-.page-recursos .btn-cadastro,
-.page-sobre .btn-cadastro {
+:is(.page-precos, .page-recursos, .page-sobre) .btn-cadastro {
   background: var(--secondary);
   border: 2px solid var(--secondary);
   transition: background-color 0.3s, color 0.3s;
 }
 
-.page-precos .btn-cadastro:hover,
-.page-recursos .btn-cadastro:hover,
-.page-sobre .btn-cadastro:hover {
+:is(.page-precos, .page-recursos, .page-sobre) .btn-cadastro:hover {
   background: #29C5FF;
   border: 2px solid #29C5FF;
 }
