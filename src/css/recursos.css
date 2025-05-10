@@ -161,6 +161,10 @@
     color: var(--secondary);
 }
 
+.btn-centralizado {
+    display: flex;
+    justify-content: center;}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .recursos-section {
@@ -169,6 +173,7 @@
     
     .recursos-header {
         flex-direction: column;
+        gap: 20px;
     }
     
     .recursos-header h1 {
