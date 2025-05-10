@@ -12,7 +12,7 @@ import HeaderScroll from '../modules/header-scroll.js';
 import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
 import AnalyticsLoader from '../modules/analyticsLoader.js';
-import ScrollToSection from '../modules/ScrollToSection.js'
+import PlanToggle from '../modules/PlanToggle.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM completamente carregado.");
@@ -58,11 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initPageOpenAnimations();
     initScrollAnimations();
 
-    //scroll ancora
-    const scrollToContact = new ScrollToSection(".scroll-to-contact");
-    scrollToContact.init();
-
     // Inicializa a classe
     new AnalyticsLoader();
     new FormHandler();
+    new PlanToggle();
 });

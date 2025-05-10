@@ -18,7 +18,6 @@ import VideoPreload from "../modules/VideoPreload.js";
 import AnalyticsLoader from '../modules/analyticsLoader.js';
 import VideoPopup from '../modules/VideoPopup.js';
 import SwiperAgentsSlider from '../modules/SwiperAgentsSlider.js';
-import ScrollToSection from '../modules/ScrollToSection.js'
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM completamente carregado.");
@@ -70,10 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializa a classe
     new AnalyticsLoader();
     new FormHandler();
-
-    //scroll ancora
-    const scrollToContact = new ScrollToSection(".scroll-to-contact");
-    scrollToContact.init();
 
     const swiperEl = document.querySelector('.agents-swiper');
     if (swiperEl) {
