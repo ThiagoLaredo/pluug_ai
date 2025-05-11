@@ -14,8 +14,6 @@ import MenuMobile from '../modules/menu-mobile.js';
 import HeaderScroll from '../modules/header-scroll.js';
 import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
-import VideoPreload from "../modules/VideoPreload.js";
-import AnalyticsLoader from '../modules/analyticsLoader.js';
 import VideoPopup from '../modules/VideoPopup.js';
 import SwiperAgentsSlider from '../modules/SwiperAgentsSlider.js';
 
@@ -63,11 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initPageOpenAnimations();
     initScrollAnimations();
 
-    new VideoPreload();
-
-
     // Inicializa a classe
-    new AnalyticsLoader();
     new FormHandler();
 
     const swiperEl = document.querySelector('.agents-swiper');

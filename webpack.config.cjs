@@ -117,12 +117,7 @@ module.exports = (env, argv) => {
             minSize: 30000,
             chunks: 'all',
             enforce: true,
-          },
-          gtm: {
-            test: /[\\/]googletagmanager[\\/]/,
-            name: 'gtm',
-            chunks: 'async',
-          },
+          }
         },
       },
     },
