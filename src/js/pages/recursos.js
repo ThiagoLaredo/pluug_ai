@@ -5,14 +5,12 @@ import "../../css/footer.css";
 import "../../css/menu-mobile.css";
 import "../../css/cores.css";
 import "../../css/componentes.css";
-import "../../css/social-sidebar.css";
 import "../../css/formulario-contato.css";
 
 import MenuMobile from '../modules/menu-mobile.js';
 import HeaderScroll from '../modules/header-scroll.js';
 import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
-import AnalyticsLoader from '../modules/analyticsLoader.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM completamente carregado.");
@@ -59,7 +57,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
 
     // Inicializa a classe
-    new AnalyticsLoader();
-
     new FormHandler();
 });
