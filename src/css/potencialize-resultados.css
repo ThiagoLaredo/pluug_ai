@@ -57,7 +57,7 @@
     color: var(--text);
   }
   
-  .card-content h5 {
+  .card-content h3 {
     color: var(--secondary);
     font: 700 1.4rem/1.4rem 'Inter', sans-serif;
     margin-top: 1.5rem;
