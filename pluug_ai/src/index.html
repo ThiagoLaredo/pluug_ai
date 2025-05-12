@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preload" href="./videos/lancamento.mp4" as="video" type="video/mp4" media="(min-width: 1025px)">
+
+    <!-- Preload da imagem do banner -->
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Planos da pluug.ai | Escolha o ideal para você</title>
-    <meta name="description" content="Descubra o plano ideal e comece a transformar sua presença digital com inteligência artificial.">
+    <title>Criação de conteúdo com IA que engaja e converte | pluug.ai</title>
+    <meta name="description" content="Transforme ideias em conteúdos autênticos com inteligência artificial. Crie, engaje e converta com a pluug.ai.">
     <link rel="icon" href="./imgs/favicon.ico" type="image/x-icon">
-    
+
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Planos da pluug.ai | Escolha o ideal para você">
-    <meta property="og:description" content="Descubra o plano ideal e comece a transformar sua presença digital com inteligência artificial.">
-    <meta property="og:url" content="https://www.pluug.ai/planos">
+    <meta property="og:title" content="Criação de conteúdo com IA que engaja e converte | pluug.ai">
+    <meta property="og:description" content="Transforme ideias em conteúdos autênticos com inteligência artificial. Crie, engaje e converta com a pluug.ai.">
+    <meta property="og:url" content="https://www.pluug.ai/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.pluug.ai/imgs/pluug-facebook.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Planos da pluug.ai | Escolha o ideal para você">
-    <meta name="twitter:description" content="Descubra o plano ideal e comece a transformar sua presença digital com inteligência artificial.">
+    <meta name="twitter:title" content="Criação de conteúdo com IA que engaja e converte | pluug.ai">
+    <meta name="twitter:description" content="Transforme ideias em conteúdos autênticos com inteligência artificial. Crie, engaje e converta com a pluug.ai.">
     <meta name="twitter:image" content="https://www.pluug.ai/imgs/pluug-twitter-card.webp">
-    
+
+
     <!-- Preconnect to Google Fonts for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,13 +37,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap" rel="stylesheet"></noscript>
 
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> -->
     <script>document.documentElement.className += ' js';</script>
 
   </head>
 
-  <body class="page-precos">
+  <body>
 
-   <header class="header">
+    <header class="header">
       <div class="container">
         <div class="header_menu">
           <a data-menu="logo" href="/">
@@ -96,7 +101,7 @@
               <li><a href="./recursos.html">Plataforma</a></li>
               <li><a href="./creators.html">Depoimentos</a></li>
               <li><a href="./sobre.html">Sobre</a></li>
-              <li><a href="./precos.html">Planos</a></li>
+              <li><a href="./planos.html">Planos</a></li>
             </ul>
           </nav>
         </div>   
@@ -107,7 +112,6 @@
     </header> 
 
     <!-- Icones sociais menu mobile -->
-
     <a data-menu="contato-mobile" href="mailto:contato@pluug.ai" target="_blank">contato@pluug.ai</a>
     <a data-menu="whatsapp" href="https://wa.me/5521985486951" target="_blank" loading="lazy">
       <img src="./imgs/icones/whatsapp-icon2.svg" alt="icone WhatsApp mobile" width="32" height="32">
@@ -122,147 +126,320 @@
       <span class="visually-hidden">Ir para o Instagram</span>
     </a>
 
-  <section class="planos-section">
-    <div class="planos container page-open-animate">
-      <div class="planos-header page-open-animate">
-        <h1>Planos</h1>
-        <p>Escolha o plano que melhor se adapta às suas necessidades e comece a transformar sua presença digital hoje mesmo!</p>
+    <section>
+      <div class="video-section page-open-animate">
+        <!-- Conteúdo principal -->
+        <div class="container">
+          <div class="text-content">
+            <h1>Criação de conteúdo que conecta, engaja e liberta!</h1>
+            <p>A pluug.ai transforma suas ideias em conteúdos autênticos que engajam e convertem, com a ajuda da IA.</p>
+            <a href="precos.html" class="btn-lista-espera">
+              Quero fazer parte
+            </a>          
+          </div>
+      
+          <!-- Thumbnail clicável -->
+          <div class="video-thumbnail" id="videoThumbnail">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./imgs/thumbnail-video-600.avif 600w,
+                  ./imgs/thumbnail-video-1200.avif 1200w,
+                  ./imgs/thumbnail-video-1920.avif 1920w
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./imgs/thumbnail-video-600.webp 600w,
+                  ./imgs/thumbnail-video-1200.webp 1200w,
+                  ./imgs/thumbnail-video-1920.webp 1920w
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <img
+                src="./imgs/thumbnail-video.webp"
+                alt="Descrição do vídeo"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+            </picture>
+            
+            <div class="play-icon">&#9658;</div> <!-- ícone play -->
+          </div>
+        </div>
+        <!-- SVG decorativo -->
+        <div class="grafismo-invertido-wrapper ">
+          <img src="./imgs/grafismo-invertido.svg" alt="Grafismo decorativo" width="1351" height="210.36">
+        </div>
       </div>
-      <div class="toggle-title">
-        <p><span class="texto-destaque">Economize 20%</span> no plano anual.</p>
-        <div class="plan-toggle-wrapper">
-          <span>Mensal</span>
-          <label class="switch">
-            <input type="checkbox" id="planToggle">
-            <span class="slider"></span>
-          </label>
-          <span>Anual</span>
-        </div>
-      </div>      
-      <div class="planos-grid">
-        <div class="plano">
-          <h2>Creator</h2>
-          <p>Recursos poderosos de IA para criar conteúdo e estratégias para o digital.</p>
-          <span>Faça um teste gratuito de 3 dias</span>
-          <p>O plano inclui:</p>
-          <ul>
-            <li>1 licença exclusiva e não compartilhável</li>
-            <li>Trend AI (tendências das redes sociais)</li>
-            <li>Creator Genie (posts, roteiros, copies...)</li>
-            <li>Creator Flow (calendários, campanhas, funis...)</li>
-            <li>Suporte básico (via e-mail e chamado)</li>
-          </ul>
-          <p class="plan-price" data-monthly="147,90/mês" data-annual="R$ 1.419,84/ano">147,90/mês</p>
-          <button class="btn-comprar">Comece Agora</button>
-          <div class="recursos">
-            <h3>Recursos</h3>
-            <ul>
-              <li>Usuários: 1 licença exclusiva e não compartilhável</li>
-              <li>Personalização: dentro de sessão</li>
-              <li>Agentes Inteligentes: 17 agentes</li>
-              <li class="sim">Acesso ao Dashboard de Trends</li>
-              <li class="sim">Geração de Conteúdos</li>
-              <li class="sim">Criação de Estratégias</li>
-              <li class="sim">Suporte: Básico</li>
-              <li class="nao">Geração de Infoprodutos</li>
-              <li class="nao">Classificação de Leads</li>
-              <li class="nao">Acesso antecipado a novos Agentes</li>
-              <li class="nao">Memória e Personalização Profunda</li>
-              <li class="nao">Base de conhecimento</li>
-              <li class="nao">Suporte customer success</li>
-            </ul>
-          </div>
-        </div>
+    </section>
 
-        <div class="plano plano-destaque">
-          <div class="selo-favorito">
-            <svg class="icone-coracao" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35z" fill="#D13F5F"/></svg>            <div class="texto">
-              <span>Nosso</span>
-              <span>Favorito</span>
-            </div>
-          </div>                  
-          <h2>Pro</h2>
-          <p>Recursos avançados de IA para criar conteúdo, estratégias, infoprodutos e classificação de Leads</p>
-          <span>Faça um teste gratuito de 3 dias</span>
-          <p>O plano inclui:</p>
-          <ul>
-            <li>1 licença exclusiva e não compartilhável</li>
-            <li>Tudo do plano Creator, mais:</li>
-            <li>Creator Builder (criação de infoprodutos)</li>
-            <li>Leads AI (classificação de Leads)</li>
-            <li>Suporte Pro (resposta priorizada)</li>
-          </ul>
-          <p class="plan-price" data-monthly="247,90/mês" data-annual="R$  2.379,84/ano">247,90<span class="price-suffix">/mês</span></p>
-          <button class="btn-comprar">Comece Agora</button>
-          <div class="recursos">
-            <h3>Recursos</h3>
-            <ul>
-              <li>Usuários: 1 licença exclusiva e não compartilhável</li>
-              <li>Personalização: dentro de sessão</li>
-              <li>Agentes Inteligentes: 26 agentes</li>
-              <li class="sim">Acesso ao Dashboard de Trend</li>
-              <li class="sim">Geração de Conteúdos</li>
-              <li class="sim">Criação de Estratégias</li>
-              <li class="sim">Suporte: Pro</li>
-              <li class="sim">Geração de Infoprodutos</li>
-              <li class="sim">Classificação de Leads</li>
-              <li class="sim">Acesso antecipado a novos Agentes</li>
-              <li class="nao">Memória e Personalização Profunda</li>
-              <li class="nao">Base de conhecimento</li>
-              <li class="nao">Suporte customer success</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="plano">
-          <h2>Business</h2>
-          <p>Personalização avançada, gestão do conteúdo, treinamento e suporte exclusivo</p>
-          <div class="contato-plano">
-            <a href="https://wa.me/5521985486951" class="btn-contato" target="_blank">Entre em contato</a>
-          </div>          
-          <p>O plano inclui:</p>
-          <ul>
-            <li>3 licenças </li>
-            <li>Tudo do plano Pro, mais:</li>
-            <li>Gestão das licenças e conteúdo gerado pela equipe</li>
-            <li>Memória contínua e personalizada (IA aprende e adapta conforme o uso).</li>
-            <li>Base de conhecimento exclusiva</li>
-            <li>1 Treinamento para equipe</li>
-            <li>Suporte exclusivo - customer success </li>
-          </ul>
-          <div class="contato-plano">
-            <a href="https://wa.me/5521985486951" class="btn-contato" target="_blank">Entre em contato</a>
-          </div>  
-          <button class="btn-comprar">Comece Agora</button>
-          <div class="recursos">
-            <h3>Recursos</h3>
-            <ul>
-              <li>3 licenças para serem atribuidas</li>
-              <li>Personalização: Sim</li>
-              <li>Agentes Inteligentes: Todos os Agentes</li>
-              <li class="sim">Acesso ao Dashboard de Trends</li>
-              <li class="sim">Geração de Conteúdos</li>
-              <li class="sim">Criação de Estratégias</li>
-              <li class="sim">Suporte: Pro</li>
-              <li class="sim">Geração de Infoprodutos</li>
-              <li class="sim">Classificação de Leads</li>
-              <li class="sim">Acesso antecipado a novos Agentes</li>
-              <li class="sim">Memória e Personalização Profunda</li>
-              <li class="sim">Base de conhecimento</li>
-              <li class="sim">Suporte customer success</li>
-            </ul>
-          </div>
-        </div>
+    <!-- Pop-up do vídeo -->
+    <div class="video-popup" id="videoPopup">
+      <div class="video-popup-inner">
+        <button class="close-popup" id="closePopup">&times;</button>
+        <video id="videoElement" controls preload="metadata">
+          <source src="" type="video/mp4">
+          Seu navegador não suporta vídeos HTML5.
+        </video>
       </div>
     </div>
-  </section>  
+
+    <!-- Pq escolher -->
+    <section class="porque-escolher animate-me container">
+      <h2>Por que escolher a pluug.ai?</h2>
+      <div class="cards">
+        <div class="card-item">
+          <picture>
+            <source
+              type="image/avif"
+              srcset="
+                ./imgs/liberdade-600.avif 600w,
+                ./imgs/liberdade-1200.avif 1200w,
+                ./imgs/liberdade-1920.avif 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./imgs/liberdade-600.webp 600w,
+                ./imgs/liberdade-1200.webp 1200w,
+                ./imgs/liberdade-1920.webp 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <img
+              src="./imgs/liberdade.jpg"
+              alt="Mulher sorrindo trabalhando no computador com expressão de liberdade"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </picture>
+          <h3>Liberdade</h3>
+          <p>A nossa Inteligência Artificial foi criada para trabalhar com você, porque criar conteúdo não precisa ser exaustivo.</p>
+        </div>
+      
+        <div class="card-item">
+          <picture>
+            <source
+              type="image/avif"
+              srcset="
+                ./imgs/autenticidade-600.avif 600w,
+                ./imgs/autenticidade-1200.avif 1200w,
+                ./imgs/autenticidade-1920.avif 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./imgs/autenticidade-600.webp 600w,
+                ./imgs/autenticidade-1200.webp 1200w,
+                ./imgs/autenticidade-1920.webp 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <img
+              src="./imgs/autenticidade.jpg"
+              alt="Pessoa autêntica mostrando seu trabalho criativo"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </picture>
+          <h3>Autenticidade</h3>
+          <p>Crie conteúdos personalizados que refletem a sua essência.</p>
+        </div>
+      
+        <div class="card-item">
+          <picture>
+            <source
+              type="image/avif"
+              srcset="
+                ./imgs/crescimento-rapido-600.avif 600w,
+                ./imgs/crescimento-rapido-1200.avif 1200w,
+                ./imgs/crescimento-rapido-1920.avif 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                ./imgs/crescimento-rapido-600.webp 600w,
+                ./imgs/crescimento-rapido-1200.webp 1200w,
+                ./imgs/crescimento-rapido-1920.webp 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <img
+              src="./imgs/crescimento-rapido.jpg"
+              alt="Gráfico de crescimento exponencial mostrando progresso rápido"
+              loading="lazy"
+              width="400"
+              height="300"
+            />
+          </picture>
+          <h3>Crescimento rápido</h3>
+          <p>Produza mais, com menos esforço, e veja seus resultados escalarem.</p>
+        </div>
+      </div>
+      <div class="btn-wrapper">
+        <a href="https://painel.pluug.ai/account/register" target="_blank" class="btn-desconto">Cadastre-se agora!</a>
+      </div>
+    </section>
+
+    <!-- Potencialize seus resultados -->
+    <section class="potencialize-resultados animate-me">
+      <div class="container">
+        <h2>Potencialize seus resultados no Instagram <br>e outras redes sociais</h2>
+        
+        <div class="cards-container">
+          <div class="card">
+            <div class="card-icon">
+              <img src="./imgs/icones/Gzinho.svg" width="57" height="56" alt="Ícone de consistência">
+            </div>
+            <div class="card-content">
+              <p>Crie conteúdo de forma rápida, estratégica e otimizada.</p>
+              <p>Posicione-se com consistência e frequência. Agora é a sua vez de se destacar.</p>
+              <h3>+Consistência</h3>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-icon">
+              <img src="./imgs/icones/Gzinho.svg" width="57" height="56" alt="Ícone de frequência">
+            </div>
+            <div class="card-content">
+              <p>Simplifique a criação de conteúdo com nossos Agentes Inteligentes.</p>
+              <p>Produza conteúdos que conquistam seguidores, aumentam seu alcance e posicionam você como referência.</p>
+              <h3>+Frequência</h3>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-icon">
+              <img src="./imgs/icones/Gzinho.svg" width="57" height="56" alt="Ícone de agilidade">
+            </div>
+            <div class="card-content">
+              <p>Chega de quebrar a cabeça com prompts complicados, em minutos, você terá conteúdos personalizados para as suas redes.</p>
+              <p>Posts prontos, otimizados e feitos para engajar.</p>
+              <h3>+Agilidade</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="button-container">
+          <a href="./planos.html" class="cta-button">
+            Quero escolher meu plano
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agentes-inteligentes -->
+    <section class="agentes-inteligentes animate-me">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="text-content">
+            <h2>Como os Agentes <br>Inteligentes podem <br>ajudar no seu negócio?</h2>
+            <ul class="features-list">
+              <li>Criando estratégias e conteúdos para fortalecer sua presença digital.</li>
+              <li>Criando conteúdo para multiformatos e redes sociais.</li>
+              <li>Personalizando seu conteúdo.</li>
+              <li>Criando Infoprodutos.</li>
+            </ul>
+          </div>
+          
+          <div class="image-content">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="
+                  ./imgs/agentes-inteligentes-600.avif 600w,
+                  ./imgs/agentes-inteligentes-1200.avif 1200w,
+                  ./imgs/agentes-inteligentes-1920.avif 1920w
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  ./imgs/agentes-inteligentes-600.webp 600w,
+                  ./imgs/agentes-inteligentes-1200.webp 1200w,
+                  ./imgs/agentes-inteligentes-1920.webp 1920w
+                "
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <img
+                src="./imgs/agentes-inteligentes.jpg"
+                alt="Agentes Inteligentes em ação"
+                loading="lazy"
+                width="400"
+                height="300"
+              />
+            </picture>            
+          </div>
+        </div>
+      </div>  
+        <div class="additional-features">
+          <h3 class="container">Além disso, os nossos Agentes Inteligentes vão poder te ajudar com:</h3>
+          <section class="agents-section">
+            <div class="swiper agents-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide agent-card">
+                  <img src="./imgs/icones/copywrite-para-anuncios.svg" width="64" height="65" alt="Ícone Copywrite">
+                  <h4>Copywrite para Anúncios</h4>
+                </div>
+                <div class="swiper-slide agent-card">
+                  <img src="./imgs/icones/conteudo-carrossel.svg" width="64" height="65" alt="Ícone Carrossel">
+                  <h4>Conteúdo para Carrossel</h4>
+                </div>
+                <div class="swiper-slide agent-card">
+                  <img src="./imgs/icones/roteiro-reels.svg" width="64" height="65" alt="Ícone Reels">
+                  <h4>Roteiro para Reels</h4>
+                </div>
+                <div class="swiper-slide agent-card">
+                  <img src="./imgs/icones/calendario-conteudo.svg" width="64" height="65" alt="Ícone Calendário">
+                  <h4>Calendário para Conteúdo</h4>
+                </div>
+                <div class="swiper-slide agent-card">
+                  <img src="./imgs/icones/estrategia-editoriais.svg" width="64" height="65" alt="Ícone Editoriais">
+                  <h4>Estratégias de Editoriais</h4>
+                </div>
+                <div class="swiper-slide agent-card">
+                  <img src="./imgs/icones/conteudo-campanhas.svg" width="64" height="65" alt="Ícone Campanhas">
+                  <h4>Conteúdo para Campanhas</h4>
+                </div>
+                <div class="swiper-slide agent-card">
+                  <img src="./imgs/icones/conteudo-stories.svg" width="64" height="65" alt="Ícone Stories">
+                  <h4>Conteúdo para Stories</h4>
+                </div>
+                <div class="swiper-slide agent-card">
+                  <img src="./imgs/icones/legendas-atraentes.svg" width="64" height="65" alt="Ícone Legendas">
+                  <h4>Legendas Atraentes</h4>
+                </div>
+                <div class="swiper-slide agent-card">
+                  <img src="./imgs/icones/criacao-titulos-virais.svg" width="64" height="65" alt="Ícone Títulos">
+                  <h4>Criação de Títulos Virais</h4>
+                </div>
+              </div>
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </section>          
+        </div> 
+    </section>
 
     <section id="entre-em-contato" class="entre-em-contato">
       <div class="container animate-me">
         <!-- Formulário -->
         <div id="formulario">
-          <h2>Receba nossa Newsletter e fique por dentro das novidades</h2>
-          
+          <h2>Receba nossa Newsletter e fique por dentro das novidades</h2>         
           <form class="contact-form">
             <div class="form-grid">
               <div class="form-group">
@@ -344,13 +521,13 @@
                 <img src="imgs/icones/linkedin-footer.svg" width="20" height="21" alt="Ícone do LinkedIn" class="icon"> pluug-ai
               </a>
             </div>
-          </div>   
+          </div>                
           <div class="footer-image">
             <img src="./imgs/icones/mascotes-rodape.svg" width="785" height="255" alt="Mascotes Pluug.ai" class="mascotes-img">
           </div>
         </div>
       </div>
     </footer>
-
+   
   </body>
 </html>
