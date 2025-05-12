@@ -11,7 +11,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const PATHS = { src: path.join(__dirname, 'src') };
 
-const pages = ['index', 'sobre', 'creators', 'recursos', 'precos'];
+const pages = ['index', 'sobre', 'creators', 'recursos', 'planos'];
 
 const entryPoints = pages.reduce((entries, page) => {
   const jsPath = `./src/js/pages/${page}.js`;
