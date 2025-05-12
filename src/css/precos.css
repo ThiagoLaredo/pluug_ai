@@ -139,7 +139,6 @@
     transition: all 0.3s ease;
     position: relative;
     z-index: 2;
-    margin-top: 20px;
     border: none;
   }
   
@@ -274,6 +273,7 @@
   
   .btn-comprar {
     width: 100%;
+    display: inline-block;
     padding: 14px 6px;
     background: var(--secondary);
     text-align: center;
@@ -356,13 +356,16 @@
     }
   
     .planos-grid {
-      gap: 30px;
+      gap: 40px;
     }
   
     .plano {
       min-width: 100%;
       padding: 25px 20px;
-      margin-top: 10px;
+    }
+
+    .plano-destaque {
+      transform: none;
     }
 
     .plano h2 {
