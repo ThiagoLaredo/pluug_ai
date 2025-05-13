@@ -1,16 +1,11 @@
 .porque-escolher {
-    padding: 7rem 0 5rem;
+    padding: 8rem 0 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2.5rem;
   }
   
-  .porque-escolher .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
   
   .porque-escolher h2 {
     font: 700 2.5rem 'Inter', sans-serif;
@@ -65,6 +60,7 @@
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease; 
+    display: inline-block;
   }
   
   .btn-desconto:hover {
@@ -100,3 +96,49 @@
     }
   }
   
+  /* iPad Portrait (768px-1024px) - .porque-escolher section */
+@media only screen 
+and (min-width: 768px) 
+and (max-width: 1024px) 
+and (orientation: portrait) {
+
+.porque-escolher {
+  padding: 5rem 2rem; /* Reduced vertical padding */
+  gap: 2rem; /* Reduced gap between elements */
+}
+
+.porque-escolher h2 {
+  font-size: 2.2rem; /* Slightly smaller heading */
+  margin-bottom: 1rem;
+}
+
+.cards {
+  gap: 1.5rem; /* Reduced gap between cards */
+  width: 100%; /* Ensure full width usage */
+}
+
+.card-item {
+  flex: 1 1 45%; /* Two cards per row with equal width */
+  min-width: 280px; /* Minimum card width */
+  max-width: calc(50% - 1rem); /* Account for gap */
+  padding: 1.5rem; /* Slightly reduced padding */
+}
+
+.card-item img {
+  height: 250px; /* Reduced image height */
+}
+
+.card-item h3 {
+  margin: 1.5rem 0 0.8rem; /* Adjusted margins */
+  font-size: 1.3rem; /* Slightly smaller title */
+}
+
+.card-item p {
+  font-size: 0.95rem; /* Slightly smaller text */
+}
+
+.btn-desconto {
+  padding: 0.8rem 1.8rem; /* Slightly smaller button */
+  margin-top: 1rem; /* Added space above button */
+}
+}
