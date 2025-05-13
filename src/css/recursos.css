@@ -40,8 +40,8 @@
 
 .recursos-section {
     position: relative;
-    padding: 6.5rem 0 5rem;
-    background: linear-gradient(to bottom, var(--primary) 0%, var(--primary) 30%, rgba(var(--primary-rgb), 0.2) 30%, rgba(var(--primary-rgb), 0.2) 100%);
+    padding: calc(var(--header-height) + 2rem) 0 4rem 0; /* Reduzi o padding */
+    background: linear-gradient(to bottom, var(--primary) 0%, var(--primary) 32%, rgba(var(--primary-rgb), 0.2) 32%, rgba(var(--primary-rgb), 0.2) 100%);
 }
 
 .recursos-container {
@@ -202,7 +202,7 @@
     .recursos-grid {
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 0 15px;
+        padding: 0px;
     }
     
     .recurso-card {

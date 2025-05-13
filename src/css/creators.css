@@ -28,6 +28,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: calc(var(--header-height) + 1rem) 0 4rem 0; /* Reduzi o padding */
 }
 
 .creators-header .container {
@@ -178,7 +179,7 @@
 
 .grafismo-white-wrapper {
   position: absolute;
-  bottom: -25px; /* gruda o SVG no fundo da seção */
+  bottom: -36px; /* gruda o SVG no fundo da seção */
   left: 0;
   width: 100%;
   pointer-events: none; /* evita que o SVG atrapalhe cliques no conteúdo */
@@ -407,15 +408,14 @@
   .page-creators .menu li a,
   .page-creators .menu li span {
   color: var(--textwhite); 
-}
+  }
 
   .creators-header {
-    height: auto;
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
   }
 
   .creators-header .container {
-  padding: 6rem 1rem 5rem;
-  flex-direction: column;
+    flex-direction: column;
   }
 
   .mosaic-decoration {
@@ -444,6 +444,10 @@
 
   .mosaic-large {
     width: auto;
+  }
+
+  .grafismo-white-wrapper {
+    bottom: 0px; /* gruda o SVG no fundo da seção */
   }
 
   .card-depoimentos-content {
