@@ -9,6 +9,7 @@ import "../../css/formulario-contato.css";
 
 import MenuMobile from '../modules/menu-mobile.js';
 import HeaderScroll from '../modules/header-scroll.js';
+import HeaderManager from '../modules/HeaderManager.js';
 import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
 
@@ -33,7 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('MenuMobile failed to initialize');
     }
 
-    // Inicializa a mudança de Header ao scroll, se a classe .header existir
+    // 1. INICIALIZE O HEADER MANAGER PRIMEIRO (novo código)
+    const headerManager = new HeaderManager('.header');
+
+    // 2. DEPOIS INICIALIZE O HEADER SCROLL (código existente)
     const headerEl = document.querySelector('.header');
     if (headerEl) {
         const headerScroll = new HeaderScroll('.header');
