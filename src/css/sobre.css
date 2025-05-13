@@ -272,4 +272,35 @@
       height: auto;
     }
   }
+
+/* iPad Portrait (768px-1024px) Header Adjustments */
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait) {
+
+    .tecnologia {
+      height: auto;
+    }
+
+    .tecnologia-texto {
+      max-width: 70%;
+    }
+
+    .tecnologia-imagem {
+      right: -6rem;
+    }
+
+    .transformamos-ideias {
+      padding: 5rem 1.25rem;
+    }
+
+    .transformamos-texto {
+      max-width: 100%;
+    }
+
+    .movimento-container {
+      padding: 0 1.25rem;
+    }
+  }
   

@@ -269,29 +269,6 @@ input:checked + .slider:before {
   transform: translateY(-1px);
 }
 
-.btn-comprar {
-  width: 100%;
-  display: inline-block;
-  padding: 14px 6px;
-  background: var(--secondary);
-  text-align: center;
-  color: var(--textwhite);
-  border: none;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.btn-comprar:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  background-color: #38C7F2;
-}
-
 .recursos {
   border-top: 1px solid var(--bgroxo);
   padding-top: 20px;
@@ -376,3 +353,21 @@ input:checked + .slider:before {
   }
 }
 
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1024px) 
+  and (orientation: portrait) {
+
+  .planos-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plano {
+    max-width: 80%;
+  }
+
+  .plano-destaque {
+    transform: none;
+  }
+}
