@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
 
     // Inicializa a classe
-    new FormHandler();
+    new FormHandler('.contact-form');
 
     const swiperEl = document.querySelector('.agents-swiper');
     if (swiperEl) {

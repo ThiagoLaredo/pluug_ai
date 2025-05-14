@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
 
     // Inicializa a classe
-    new FormHandler();
+    new FormHandler('.contact-form');
 
     // Verifica se estamos na página de creators
     if (document.querySelector('.page-creators')) {
