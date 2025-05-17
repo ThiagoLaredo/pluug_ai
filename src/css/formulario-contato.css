@@ -105,15 +105,6 @@ max-width: 600px;
 animation: fadeInUp 0.5s ease-out;
 position: relative;
 overflow: hidden;
-
-/* Centralização com Flexbox */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-/* Espaçamento interno */
-gap: 15px;
 }
 
 .form-feedback.success {
@@ -121,6 +112,11 @@ background-color: var(--bg-branco);
 color: var(--primary);
 border: 2px solid var(--primary);
 box-shadow: 0 5px 20px rgba(var(--primary-rgb), 0.1);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 15px;
 }
 
 .form-feedback.success .feedback-icon {

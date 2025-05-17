@@ -69,13 +69,10 @@ export const initPageOpenAnimations = () => {
 
 
   export function initScrollAnimations() {
-    console.log("initScrollAnimations() chamada!");
   
     const elements = document.querySelectorAll(".animate-me");
-    console.log("Elementos encontrados:", elements);
   
     elements.forEach((el, index) => {
-      console.log(`Registrando ScrollTrigger para o elemento ${index}`, el);
   
       gsap.from(el, {
         scrollTrigger: {

@@ -296,7 +296,7 @@
         <div class="container animate-me">
           <!-- Formulário -->
           <div id="formulario">
-            <h2>Receba nossa Newsletter e fique por dentro das novidades</h2>
+            <h2>Receba nossa Newsletter e fique por dentro das novidades</h2>         
             <form class="contact-form">
               <div class="form-grid">
                 <div class="form-group">
@@ -320,9 +320,15 @@
               </div>
               
               <div class="terms-checkbox">
-                <input type="checkbox" id="termos" required>
+                <input type="checkbox" id="termos" required data-gtm-form-interact-field-id="0">
                 <label for="termos">
-                  Li e aceito os <button type="button" class="terms-link" data-modal="modalTermos">termos de uso e política de privacidade</button>
+                  Li e aceito os 
+                  <a class="terms-link" href="./politica-privacidade.html#termos-de-uso" target="_blank" rel="noopener noreferrer">
+                    termos de uso <svg width="12" height="12" viewBox="0 0 24 24" style="display: inline-block; vertical-align: middle;"><path fill="currentColor" d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg>
+                  </a> e 
+                  <a class="terms-link" href="./politica-privacidade.html#politica-privacidade" target="_blank" rel="noopener noreferrer">
+                    política de privacidade <svg width="12" height="12" viewBox="0 0 24 24" style="display: inline-block; vertical-align: middle;"><path fill="currentColor" d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7Z"/></svg>
+                  </a>
                 </label>
                 <span class="error-message" id="error-termos"></span>
               </div>
@@ -331,24 +337,6 @@
                 <button type="submit" class="btn-enviar" id="enviar">Enviar</button>
               </div>
             </form>
-          </div>
-      
-          <!-- Modal dos termos e condições -->
-          <div id="modalTermos" class="modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3>Termos de Uso e Política de Privacidade</h3>
-                <button class="modal-close">&times;</button>
-              </div>
-              <div class="modal-body">
-                <!-- Conteúdo do modal mantido igual -->
-                <p><strong>I. Termos de Uso e Serviço da pluug.ai</strong></p>
-                <!-- ... restante do conteúdo dos termos ... -->
-              </div>
-              <div class="modal-footer">
-                <button class="btn-secondary modal-close">Fechar</button>
-              </div>
-            </div>
           </div>
         </div>
       </section>

@@ -28,10 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
         '.header_acoes' // Novo parâmetro
     );
     if (menuMobile) {
-        console.log('MenuMobile initialized successfully');
         menuMobile.init();
     } else {
-        console.error('MenuMobile failed to initialize');
     }
 
     // 1. INICIALIZE O HEADER MANAGER PRIMEIRO (novo código)

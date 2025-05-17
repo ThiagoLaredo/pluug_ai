@@ -14,9 +14,7 @@ export default class VideoPopup {
       if (this.thumbnail && this.popup && this.video && this.closeBtn) {
         this.thumbnail.addEventListener('click', this.handleThumbnailClick);
         this.closeBtn.addEventListener('click', this.handleCloseClick);
-        console.log('VideoPopup initialized successfully.');
       } else {
-        console.error('VideoPopup: Um ou mais elementos não encontrados.');
       }
     }
   
