@@ -99,6 +99,17 @@ img {
   height: 0;
 }
 
+/* Evita que os elementos apareçam antes do JavaScript animar */
+[data-menu='logo'],
+[data-menu='button'],
+#menu > li > a,
+#menu > li > span,
+.header_acoes a,
+.page-open-animate {
+  opacity: 0;
+}
+
+
 /* iPad Portrait (768px-1024px) Header Adjustments */
 @media only screen 
   and (min-width: 768px) 

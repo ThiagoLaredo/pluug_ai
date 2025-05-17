@@ -1,25 +1,15 @@
-import Modal from './Modal.js';
-
 export default class FormHandler {
   constructor(formSelector) {
     this.form = document.querySelector(formSelector);
     this.feedbackElement = document.createElement('div');
     this.feedbackElement.className = 'form-feedback';
     this.form.parentNode.insertBefore(this.feedbackElement, this.form.nextSibling);
-    this.modal = new Modal('modalTermos');
     this.init();
   }
 
   init() {
-    // Abrir modal dos termos
-    document.querySelectorAll('[data-modal="modalTermos"]').forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault();
-        this.modal.open();
-      });
-    });
-
-    // Enviar formulário
+    // Removemos o listener do modal
+    // Mantemos apenas o listener do formulário
     this.form.addEventListener('submit', (e) => this.handleSubmit(e));
   }
 
@@ -102,15 +92,7 @@ export default class FormHandler {
   }
 
   showFeedback(type, message) {
-    this.feedbackElement.innerHTML = ''; // Limpa o conteúdo
-    
-    const icon = document.createElement('div');
-    icon.className = 'feedback-icon';
-    
-    const text = document.createElement('p');
-    text.textContent = message;
-    text.style.fontSize = '1.2rem';
-    text.style.margin = '15px 0';
+    this.feedbackElement.innerHTML = '';
     
     if (type === 'success') {
       this.feedbackElement.innerHTML = `
@@ -133,11 +115,8 @@ export default class FormHandler {
     
     this.feedbackElement.className = `form-feedback ${type}`;
     this.feedbackElement.style.display = 'flex';
-    
-    // Rola suavemente até a mensagem
     this.feedbackElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-    // Fecha automaticamente após 8 segundos (backup)
     if (type === 'success') {
       this.autoCloseTimeout = setTimeout(() => {
         this.clearFeedback();
@@ -145,11 +124,11 @@ export default class FormHandler {
     }
   } 
 
-clearFeedback() {
-  this.feedbackElement.classList.add('hiding');
-  setTimeout(() => {
-    this.feedbackElement.style.display = 'none';
-    this.feedbackElement.classList.remove('hiding');
-  }, 500); // Tempo igual à duração da transição
-}
+  clearFeedback() {
+    this.feedbackElement.classList.add('hiding');
+    setTimeout(() => {
+      this.feedbackElement.style.display = 'none';
+      this.feedbackElement.classList.remove('hiding');
+    }, 500);
+  }
 }

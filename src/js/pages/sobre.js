@@ -14,7 +14,6 @@ import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("DOM completamente carregado.");
 
     // Inicializa o menu mobile com submenu integrado, caso os elementos existam
     const menuMobile = new MenuMobile(
@@ -28,10 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
         '.header_acoes' // Novo parâmetro
     );
     if (menuMobile) {
-        console.log('MenuMobile initialized successfully');
         menuMobile.init();
     } else {
-        console.error('MenuMobile failed to initialize');
     }
 
     // 1. INICIALIZE O HEADER MANAGER PRIMEIRO (novo código)

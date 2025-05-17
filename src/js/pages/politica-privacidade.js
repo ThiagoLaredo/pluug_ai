@@ -1,22 +1,17 @@
 import "../../css/global.css";
+import "../../css/terms-page.css";
 import "../../css/header.css";
-import "../../css/introducao.css";
-import "../../css/pq-escolher.css";
 import "../../css/footer.css";
 import "../../css/menu-mobile.css";
 import "../../css/cores.css";
 import "../../css/componentes.css";
-import "../../css/potencialize-resultados.css";
-import "../../css/agentes-inteligentes.css";
 import "../../css/formulario-contato.css";
 
 import MenuMobile from '../modules/menu-mobile.js';
 import HeaderScroll from '../modules/header-scroll.js';
-import HeaderManager from '../modules/HeaderManager.js'; 
+import HeaderManager from '../modules/HeaderManager.js';
 import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
-import VideoPopup from '../modules/VideoPopup.js';
-import SwiperAgentsSlider from '../modules/SwiperAgentsSlider.js';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -64,9 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializa a classe
     new FormHandler('.contact-form');
-
-    const swiperEl = document.querySelector('.agents-swiper');
-    if (swiperEl) {
-        new SwiperAgentsSlider();
-    }
 });
